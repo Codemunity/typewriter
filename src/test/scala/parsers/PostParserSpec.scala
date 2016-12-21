@@ -1,5 +1,7 @@
 package parsers
 
+import models.Post
+import models.PostFormat._
 import org.scalatest.{MustMatchers, WordSpecLike}
 
 /**
@@ -45,7 +47,7 @@ class PostParserSpec extends WordSpecLike
 
     "parse the yaml and return a Post with the correct info" in {
       val (yaml, _) = PostParser.splitFileContents(postMarkdown)
-      val post = PostParser.yamlToPost(yaml.get)
+      val post: Post = PostParser.yamlToModel(yaml.get)
       post.title must equal ("First post")
       post.tags must equal (List("swift", "ios", "tdd"))
     }

@@ -4,7 +4,7 @@
 		module="typewriter$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20161219220053"
+		publication="20161221000711"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>

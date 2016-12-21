@@ -24,7 +24,5 @@ case class Post(
 }
 
 object PostFormat extends DefaultYamlProtocol {
-
   implicit val postFormat = yamlFormat10(Post)
-
 }

@@ -7,7 +7,7 @@ import net.jcazevedo.moultingyaml._
 /**
   * Created by mlopezva on 12/21/16.
   */
-class AuthorParser extends ModelParser[Author] {
+object AuthorParser extends ModelParser[Author] {
 
   override def yamlToModel(yaml: String): Author = {
     yaml.stripMargin.parseYaml.convertTo[Author]

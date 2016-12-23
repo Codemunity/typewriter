@@ -24,16 +24,15 @@ class PostStoreSpec extends TestKit(ActorSystem("testPosts"))
     description = "description",
     content = Some("content"),
     tags = List("tag1", "tag2"),
-    sanitizedContent = Some("sanitizedContent"),
     authorFilename = "yodawg",
     coverImage = "coverImage",
-    slug = Some("slug"),
+    slug = "slug",
     ignored = false
   )
 
   "A PostStore" must {
 
-    "have an empty post list at thebeginning" in {
+    "have an empty post list at the beginning" in {
       val postStore = system.actorOf(PostStore.props)
 
       postStore ! All

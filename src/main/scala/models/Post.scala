@@ -11,10 +11,9 @@ case class Post(
                  description: String,
                  content: Option[String],
                  tags: List[String],
-                 sanitizedContent: Option[String],
                  authorFilename: String,
                  coverImage: String,
-                 slug: Option[String],
+                 slug: String,
                  ignored: Boolean = true
                ) {
 
@@ -24,5 +23,5 @@ case class Post(
 }
 
 object PostFormat extends DefaultYamlProtocol {
-  implicit val postFormat = yamlFormat10(Post)
+  implicit val postFormat = yamlFormat9(Post)
 }

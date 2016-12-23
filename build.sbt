@@ -18,3 +18,6 @@ libraryDependencies ++= {
     "org.scalatest"     %% "scalatest"       % "2.2.0"       % "test"
   )
 }
+
+libraryDependencies +=
+  "org.scalatra.scalate" %% "scalate-core" % "1.8.0"

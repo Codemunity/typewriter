@@ -19,6 +19,7 @@ class PostParserSpec extends WordSpecLike
       tags: [swift, ios,tdd]
       layout: test/layout
       authorFilename: authors/miguel-lopez.yaml
+      slug: my-slug
       coverImage: images/dummy.png
       ignored: false
       ---

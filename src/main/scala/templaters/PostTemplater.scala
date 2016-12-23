@@ -1,23 +1,31 @@
 package templaters
 
-import com.github.nscala_time.time.Imports._
-import helpers.FileHelper
+import de.zalando.beard.renderer._
 import models.Post
-import org.fusesource.scalate.TemplateEngine
-import parsers.PostParser
 
-import scala.concurrent.{Await, ExecutionContext, Future}
-import scala.concurrent.duration.Duration
-import scala.io.Source
+import scala.concurrent.{ExecutionContext, Future}
 
+class PostTemplater(val workingDirectory: String) {
 
-object PostTemplater {
+  val loader = new FileTemplateLoader(
+    directoryPath = workingDirectory,
+    templateSuffix = ".beard"
+  )
 
-  val engine = new TemplateEngine
+  val templateCompiler = new CustomizableTemplateCompiler(templateLoader = loader)
+  val renderer = new BeardTemplateRenderer(templateCompiler)
 
-  def parseTemplate(filepath: String, post: Post)(implicit ec: ExecutionContext): Future[String] = {
+  def parseTemplate(templateName: String, post: Post)(implicit ec: ExecutionContext): Future[String] = {
     Future {
-      engine.layout(filepath, Map("post" -> post))
+      val template = templateCompiler.compile(TemplateName(templateName)).get
+      val context: Map[String, Map[String, Object]] = Map("post" -> post.toMap)
+
+      val result = renderer.render(template,
+        StringWriterRenderResult(),
+        context,
+        None)
+      result.toString
     }
   }
+
 }

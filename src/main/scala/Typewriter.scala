@@ -21,15 +21,16 @@ object Typewriter extends App {
   }
 
   val template = postFuture flatMap { case (post, _) =>
-    PostTemplater.parseTemplate("/Users/mlopezva/Desktop/codemunity/templates/tutorial.ssp", post) map { contents =>
+    new PostTemplater("/Users/mlopezva/Desktop/codemunity/templates/").parseTemplate("tutorial", post) map { contents =>
       (post, contents)
     }
   }
 
-  val f = template flatMap { case (post, templateContents) =>
-    val filepath = s"/Users/mlopezva/Desktop/codemunity/tutorials/${post.slug}.html"
-    FileHelper.write(templateContents, filepath)
-  }
+//  val f = template flatMap { case (post, templateContents) =>
+//    val filepath = s"/Users/mlopezva/Desktop/codemunity/tutorials/${post.slug}.html"
+//    FileHelper.write(templateContents, filepath)
+//  }
+  val f = template
 
   Await.result(f, Duration.Inf)
   println(f)

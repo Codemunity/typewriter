@@ -15,11 +15,22 @@ case class Post(
                  coverImage: String,
                  slug: String,
                  ignored: Boolean = true
-               ) {
+               ) extends Mappable {
 
 //  lazy val author: Author
-
-
+  override def toMap: Map[String, Object] = {
+    val (title, creationDate, description, content, tags, authorFilename, coverImage, slug, _) = Post.unapply(this).get
+    Map(
+      "title" -> title,
+      "creationDate" -> creationDate,
+      "description" -> description,
+      "content" -> content,
+      "tags" -> tags,
+      "authorFilename" -> authorFilename,
+      "coverImage" -> coverImage,
+      "slug" -> slug
+    )
+  }
 }
 
 object PostFormat extends DefaultYamlProtocol {

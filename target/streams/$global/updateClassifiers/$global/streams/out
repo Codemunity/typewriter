@@ -2,6 +2,7 @@
 [warn]  * org.scala-lang:scala-library:(2.11.8, 2.11.0)
 [warn]  * org.scala-lang:scala-reflect:(2.11.8, 2.11.0)
 [warn]  * org.scala-lang.modules:scala-parser-combinators_2.11:(1.0.4, 1.0.1)
+[warn]  * org.scala-lang.modules:scala-xml_2.11:(1.0.6, 1.0.1)
 [debug] :: resolving dependencies :: default#typewriter$sources_2.11;1.0
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
@@ -10,7 +11,7 @@
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [compile->default(compile)]
 [info] Resolving org.planet42#laika-core_2.11;0.6.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@761c9df
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@77897e63
 [debug] sbt-chain: module revision found in cache: org.planet42#laika-core_2.11;0.6.0
 [debug] 	found org.planet42#laika-core_2.11;0.6.0 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [compile->runtime]
@@ -18,7 +19,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang#scala-library;2.11.8 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.11.8 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@62761c9f
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3193f034
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.8
 [debug] 	found org.scala-lang#scala-library;2.11.8 in sbt-chain
 [debug] 	[2.11.8] org.scala-lang#scala-library;2.11.8
@@ -27,7 +28,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang#scala-library;2.11.8 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->default(compile)]
 [info] Resolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7051425f
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@513be2c2
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4
 [debug] 	found org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->runtime]
@@ -35,7 +36,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->net.jcazevedo#moultingyaml_2.11;0.3.1 [compile->default(compile)]
 [info] Resolving net.jcazevedo#moultingyaml_2.11;0.3.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4e23c6e4
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3cda2999
 [debug] sbt-chain: module revision found in cache: net.jcazevedo#moultingyaml_2.11;0.3.1
 [debug] 	found net.jcazevedo#moultingyaml_2.11;0.3.1 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->net.jcazevedo#moultingyaml_2.11;0.3.1 [compile->runtime]
@@ -43,7 +44,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->net.jcazevedo#moultingyaml_2.11;0.3.1 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang#scala-reflect;2.11.8 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-reflect;2.11.8 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@687aa6aa
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@301db33e
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.8
 [debug] 	found org.scala-lang#scala-reflect;2.11.8 in sbt-chain
 [debug] 	[2.11.8] org.scala-lang#scala-reflect;2.11.8
@@ -52,7 +53,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang#scala-reflect;2.11.8 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.github.nscala-time#nscala-time_2.11;2.14.0 [compile->default(compile)]
 [info] Resolving com.github.nscala-time#nscala-time_2.11;2.14.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@20797f83
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7cec0ab7
 [debug] sbt-chain: module revision found in cache: com.github.nscala-time#nscala-time_2.11;2.14.0
 [debug] 	found com.github.nscala-time#nscala-time_2.11;2.14.0 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.github.nscala-time#nscala-time_2.11;2.14.0 [compile->runtime]
@@ -60,7 +61,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.github.nscala-time#nscala-time_2.11;2.14.0 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->joda-time#joda-time;2.9.4 [compile->default(compile)]
 [info] Resolving joda-time#joda-time;2.9.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@23e30b79
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6c981705
 [debug] sbt-chain: module revision found in cache: joda-time#joda-time;2.9.4
 [debug] 	found joda-time#joda-time;2.9.4 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->joda-time#joda-time;2.9.4 [compile->runtime]
@@ -68,7 +69,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->joda-time#joda-time;2.9.4 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.joda#joda-convert;1.2 [compile->default(compile)]
 [info] Resolving org.joda#joda-convert;1.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6f0fc304
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5a7ff632
 [debug] sbt-chain: module revision found in cache: org.joda#joda-convert;1.2
 [debug] 	found org.joda#joda-convert;1.2 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.joda#joda-convert;1.2 [compile->runtime]
@@ -76,7 +77,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.joda#joda-convert;1.2 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.yaml#snakeyaml;1.17 [compile->default(compile)]
 [info] Resolving org.yaml#snakeyaml;1.17 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@580659bf
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@49bfcb67
 [debug] sbt-chain: module revision found in cache: org.yaml#snakeyaml;1.17
 [debug] 	found org.yaml#snakeyaml;1.17 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.yaml#snakeyaml;1.17 [compile->runtime]
@@ -84,7 +85,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.yaml#snakeyaml;1.17 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-actor_2.11;2.4.11 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-actor_2.11;2.4.11 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@28f62bc1
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7db011e6
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-actor_2.11;2.4.11
 [debug] 	found com.typesafe.akka#akka-actor_2.11;2.4.11 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-actor_2.11;2.4.11 [compile->runtime]
@@ -92,7 +93,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-actor_2.11;2.4.11 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe#config;1.3.0 [compile->default(compile)]
 [info] Resolving com.typesafe#config;1.3.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@35180619
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@31ec6df8
 [debug] sbt-chain: module revision found in cache: com.typesafe#config;1.3.0
 [debug] 	found com.typesafe#config;1.3.0 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe#config;1.3.0 [compile->runtime]
@@ -100,7 +101,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe#config;1.3.0 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->default(compile)]
 [info] Resolving org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6ad56e22
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4965d7d5
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-java8-compat_2.11;0.7.0
 [debug] 	found org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->runtime]
@@ -108,7 +109,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-http-spray-json-experimental_2.11;2.4.11 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-http-spray-json-experimental_2.11;2.4.11 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7ef69ca1
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6623ae3b
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-http-spray-json-experimental_2.11;2.4.11
 [debug] 	found com.typesafe.akka#akka-http-spray-json-experimental_2.11;2.4.11 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-http-spray-json-experimental_2.11;2.4.11 [compile->runtime]
@@ -116,7 +117,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-http-spray-json-experimental_2.11;2.4.11 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-http-experimental_2.11;2.4.11 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-http-experimental_2.11;2.4.11 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3d4fe47c
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@b4eaf22
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-http-experimental_2.11;2.4.11
 [debug] 	found com.typesafe.akka#akka-http-experimental_2.11;2.4.11 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-http-experimental_2.11;2.4.11 [compile->runtime]
@@ -124,7 +125,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-http-experimental_2.11;2.4.11 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-http-core_2.11;2.4.11 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-http-core_2.11;2.4.11 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6cfd33dc
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5082dc85
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-http-core_2.11;2.4.11
 [debug] 	found com.typesafe.akka#akka-http-core_2.11;2.4.11 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-http-core_2.11;2.4.11 [compile->runtime]
@@ -132,7 +133,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-http-core_2.11;2.4.11 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-stream_2.11;2.4.11 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-stream_2.11;2.4.11 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@69429646
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@52f53fbf
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-stream_2.11;2.4.11
 [debug] 	found com.typesafe.akka#akka-stream_2.11;2.4.11 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-stream_2.11;2.4.11 [compile->runtime]
@@ -140,7 +141,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-stream_2.11;2.4.11 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe#ssl-config-akka_2.11;0.2.1 [compile->default(compile)]
 [info] Resolving com.typesafe#ssl-config-akka_2.11;0.2.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1143d35d
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@60677070
 [debug] sbt-chain: module revision found in cache: com.typesafe#ssl-config-akka_2.11;0.2.1
 [debug] 	found com.typesafe#ssl-config-akka_2.11;0.2.1 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe#ssl-config-akka_2.11;0.2.1 [compile->runtime]
@@ -148,7 +149,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe#ssl-config-akka_2.11;0.2.1 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe#ssl-config-core_2.11;0.2.1 [compile->default(compile)]
 [info] Resolving com.typesafe#ssl-config-core_2.11;0.2.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1b8e9a45
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@52f4150b
 [debug] sbt-chain: module revision found in cache: com.typesafe#ssl-config-core_2.11;0.2.1
 [debug] 	found com.typesafe#ssl-config-core_2.11;0.2.1 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe#ssl-config-core_2.11;0.2.1 [compile->runtime]
@@ -156,7 +157,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe#ssl-config-core_2.11;0.2.1 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.reactivestreams#reactive-streams;1.0.0 [compile->default(compile)]
 [info] Resolving org.reactivestreams#reactive-streams;1.0.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3ff7ce2c
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@10a35dd1
 [debug] sbt-chain: module revision found in cache: org.reactivestreams#reactive-streams;1.0.0
 [debug] 	found org.reactivestreams#reactive-streams;1.0.0 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.reactivestreams#reactive-streams;1.0.0 [compile->runtime]
@@ -164,7 +165,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.reactivestreams#reactive-streams;1.0.0 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-parsing_2.11;2.4.11 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-parsing_2.11;2.4.11 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@28002b58
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@75e7746e
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-parsing_2.11;2.4.11
 [debug] 	found com.typesafe.akka#akka-parsing_2.11;2.4.11 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-parsing_2.11;2.4.11 [compile->runtime]
@@ -172,7 +173,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-parsing_2.11;2.4.11 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.spray#spray-json_2.11;1.3.2 [compile->default(compile)]
 [info] Resolving io.spray#spray-json_2.11;1.3.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2b106de8
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5694b42e
 [debug] sbt-chain: module revision found in cache: io.spray#spray-json_2.11;1.3.2
 [debug] 	found io.spray#spray-json_2.11;1.3.2 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.spray#spray-json_2.11;1.3.2 [compile->runtime]
@@ -180,7 +181,7 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.spray#spray-json_2.11;1.3.2 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-slf4j_2.11;2.4.11 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-slf4j_2.11;2.4.11 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1523d955
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@54b5777d
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-slf4j_2.11;2.4.11
 [debug] 	found com.typesafe.akka#akka-slf4j_2.11;2.4.11 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-slf4j_2.11;2.4.11 [compile->runtime]
@@ -188,28 +189,100 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-slf4j_2.11;2.4.11 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->default(compile)]
 [info] Resolving org.slf4j#slf4j-api;1.7.16 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@9eaf1b9
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6258d725
 [debug] sbt-chain: module revision found in cache: org.slf4j#slf4j-api;1.7.16
 [debug] 	found org.slf4j#slf4j-api;1.7.16 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->default(compile)]
-[info] Resolving ch.qos.logback#logback-classic;1.1.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7ff524cd
-[debug] sbt-chain: module revision found in cache: ch.qos.logback#logback-classic;1.1.3
-[debug] 	found ch.qos.logback#logback-classic;1.1.3 in sbt-chain
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->default(compile)]
-[info] Resolving ch.qos.logback#logback-core;1.1.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@10c8b585
-[debug] sbt-chain: module revision found in cache: ch.qos.logback#logback-core;1.1.3
-[debug] 	found ch.qos.logback#logback-core;1.1.3 in sbt-chain
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->default(compile)]
+[info] Resolving de.zalando#beard_2.11;0.2.0 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7ed7f3dc
+[debug] sbt-chain: module revision found in cache: de.zalando#beard_2.11;0.2.0
+[debug] 	found de.zalando#beard_2.11;0.2.0 in sbt-chain
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->default(compile)]
+[info] Resolving org.antlr#antlr4;4.5.2 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3a4b8c35
+[debug] sbt-chain: module revision found in cache: org.antlr#antlr4;4.5.2
+[debug] 	found org.antlr#antlr4;4.5.2 in sbt-chain
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->default(compile)]
+[info] Resolving org.scala-lang.modules#scala-xml_2.11;1.0.6 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@49c7d482
+[debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.6
+[debug] 	found org.scala-lang.modules#scala-xml_2.11;1.0.6 in sbt-chain
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->default(compile)]
+[info] Resolving io.monix#monix_2.11;2.1.0 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@45e6b181
+[debug] sbt-chain: module revision found in cache: io.monix#monix_2.11;2.1.0
+[debug] 	found io.monix#monix_2.11;2.1.0 in sbt-chain
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->default(compile)]
+[info] Resolving io.monix#monix-types_2.11;2.1.0 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@46b30234
+[debug] sbt-chain: module revision found in cache: io.monix#monix-types_2.11;2.1.0
+[debug] 	found io.monix#monix-types_2.11;2.1.0 in sbt-chain
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->default(compile)]
+[info] Resolving io.monix#monix-execution_2.11;2.1.0 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@402ab9aa
+[debug] sbt-chain: module revision found in cache: io.monix#monix-execution_2.11;2.1.0
+[debug] 	found io.monix#monix-execution_2.11;2.1.0 in sbt-chain
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->default(compile)]
+[info] Resolving io.monix#monix-eval_2.11;2.1.0 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@12e796ff
+[debug] sbt-chain: module revision found in cache: io.monix#monix-eval_2.11;2.1.0
+[debug] 	found io.monix#monix-eval_2.11;2.1.0 in sbt-chain
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->default(compile)]
+[info] Resolving io.monix#monix-reactive_2.11;2.1.0 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@34f21618
+[debug] sbt-chain: module revision found in cache: io.monix#monix-reactive_2.11;2.1.0
+[debug] 	found io.monix#monix-reactive_2.11;2.1.0 in sbt-chain
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->default(compile)]
+[info] Resolving org.jctools#jctools-core;2.0 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@a7891b2
+[debug] sbt-chain: module revision found in cache: org.jctools#jctools-core;2.0
+[debug] 	found org.jctools#jctools-core;2.0 in sbt-chain
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->default(compile)]
+[info] Resolving ch.qos.logback#logback-classic;1.1.7 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@f5c267b
+[debug] sbt-chain: module revision found in cache: ch.qos.logback#logback-classic;1.1.7
+[debug] 	found ch.qos.logback#logback-classic;1.1.7 in sbt-chain
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->default(compile)]
+[info] Resolving ch.qos.logback#logback-core;1.1.7 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@50adb861
+[debug] sbt-chain: module revision found in cache: ch.qos.logback#logback-core;1.1.7
+[debug] 	found ch.qos.logback#logback-core;1.1.7 in sbt-chain
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->master]
 [debug] resolving dependencies for configuration 'runtime'
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [runtime]
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [compile]
@@ -305,14 +378,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime->default(compile)]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime->compile]
@@ -405,14 +514,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->master]
 [debug] resolving dependencies for configuration 'test'
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [test]
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [runtime]
@@ -509,14 +654,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime->default(compile)]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime->compile]
@@ -609,14 +790,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [test->default(compile)]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [test->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [test->compile]
@@ -709,17 +926,53 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [test->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [test->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [test->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [test->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [test->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [test->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [test->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [test->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [test->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [test->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [test->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-testkit_2.11;2.4.11 [test->default(compile)]
 [info] Resolving com.typesafe.akka#akka-testkit_2.11;2.4.11 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@37a21718
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@63f77b5e
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-testkit_2.11;2.4.11
 [debug] 	found com.typesafe.akka#akka-testkit_2.11;2.4.11 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-testkit_2.11;2.4.11 [test->runtime]
@@ -727,20 +980,12 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-testkit_2.11;2.4.11 [test->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scalatest#scalatest_2.11;2.2.0 [test->default(compile)]
 [info] Resolving org.scalatest#scalatest_2.11;2.2.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@162cee89
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@612144e2
 [debug] sbt-chain: module revision found in cache: org.scalatest#scalatest_2.11;2.2.0
 [debug] 	found org.scalatest#scalatest_2.11;2.2.0 in sbt-chain
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scalatest#scalatest_2.11;2.2.0 [test->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scalatest#scalatest_2.11;2.2.0 [test->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scalatest#scalatest_2.11;2.2.0 [test->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [test->default(compile)]
-[info] Resolving org.scala-lang.modules#scala-xml_2.11;1.0.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@582c2cfa
-[debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.1
-[debug] 	found org.scala-lang.modules#scala-xml_2.11;1.0.1 in sbt-chain
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [test->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [test->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [test->master]
 [debug] resolving dependencies for configuration 'provided'
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [provided]
 [debug] resolving dependencies for configuration 'optional'
@@ -840,14 +1085,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->master]
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [optional]
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [provided]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [compile-internal->default(compile)]
@@ -942,14 +1223,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile-internal->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile-internal->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile-internal->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile-internal->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile-internal->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile-internal->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile-internal->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile-internal->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile-internal->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile-internal->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile-internal->master]
 [debug] resolving dependencies for configuration 'runtime-internal'
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [runtime-internal]
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [runtime]
@@ -1046,14 +1363,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime->default(compile)]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime->compile]
@@ -1146,14 +1499,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->master]
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [optional]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime-internal->default(compile)]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime-internal->runtime]
@@ -1247,14 +1636,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime-internal->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime-internal->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime-internal->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime-internal->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime-internal->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime-internal->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime-internal->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime-internal->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime-internal->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime-internal->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime-internal->master]
 [debug] resolving dependencies for configuration 'test-internal'
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [test-internal]
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [test]
@@ -1352,14 +1777,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [compile->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [compile->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [compile->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [compile->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime->default(compile)]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [runtime->compile]
@@ -1452,14 +1913,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [runtime->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [runtime->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [runtime->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [runtime->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [test->default(compile)]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [test->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [test->compile]
@@ -1552,14 +2049,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [test->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [test->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [test->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [test->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [test->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [test->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [test->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [test->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [test->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [test->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [test->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [test->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [test->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [test->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [test->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-testkit_2.11;2.4.11 [test->default(compile)]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-testkit_2.11;2.4.11 [test->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-testkit_2.11;2.4.11 [test->compile]
@@ -1568,10 +2101,6 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scalatest#scalatest_2.11;2.2.0 [test->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scalatest#scalatest_2.11;2.2.0 [test->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scalatest#scalatest_2.11;2.2.0 [test->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [test->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [test->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [test->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [test->master]
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [optional]
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [provided]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.planet42#laika-core_2.11;0.6.0 [test-internal->default(compile)]
@@ -1666,14 +2195,50 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [test-internal->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [test-internal->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.16 [test-internal->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [test-internal->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [test-internal->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [test-internal->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.3 [test-internal->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [test-internal->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [test-internal->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [test-internal->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.3 [test-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [test-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [test-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [test-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->de.zalando#beard_2.11;0.2.0 [test-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [test-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [test-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [test-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.antlr#antlr4;4.5.2 [test-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [test-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [test-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [test-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.6 [test-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [test-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [test-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [test-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix_2.11;2.1.0 [test-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [test-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [test-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [test-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-types_2.11;2.1.0 [test-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [test-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [test-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [test-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-execution_2.11;2.1.0 [test-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [test-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [test-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [test-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-eval_2.11;2.1.0 [test-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [test-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [test-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [test-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->io.monix#monix-reactive_2.11;2.1.0 [test-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [test-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [test-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [test-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.jctools#jctools-core;2.0 [test-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [test-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [test-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [test-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-classic;1.1.7 [test-internal->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [test-internal->default(compile)]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [test-internal->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [test-internal->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->ch.qos.logback#logback-core;1.1.7 [test-internal->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-testkit_2.11;2.4.11 [test-internal->default(compile)]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-testkit_2.11;2.4.11 [test-internal->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->com.typesafe.akka#akka-testkit_2.11;2.4.11 [test-internal->compile]
@@ -1682,10 +2247,6 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scalatest#scalatest_2.11;2.2.0 [test-internal->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scalatest#scalatest_2.11;2.2.0 [test-internal->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scalatest#scalatest_2.11;2.2.0 [test-internal->master]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [test-internal->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [test-internal->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [test-internal->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [test-internal->master]
 [debug] resolving dependencies for configuration 'plugin'
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [plugin]
 [debug] resolving dependencies for configuration 'sources'
@@ -1696,10 +2257,6 @@
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [pom]
 [debug] resolving dependencies for configuration 'scala-tool'
 [debug] == resolving dependencies for default#typewriter$sources_2.11;1.0 [scala-tool]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [scala-tool->default(compile)]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [scala-tool->runtime]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [scala-tool->compile]
-[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [scala-tool->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang#scala-compiler;2.11.0 [scala-tool->default(compile)]
 [info] Resolving org.scala-lang#scala-compiler;2.11.0 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.11.0 {scala-tool=[default(compile)]}
@@ -1726,6 +2283,14 @@
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang#scala-reflect;2.11.0 [scala-tool->runtime]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang#scala-reflect;2.11.0 [scala-tool->compile]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang#scala-reflect;2.11.0 [scala-tool->master]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [scala-tool->default(compile)]
+[info] Resolving org.scala-lang.modules#scala-xml_2.11;1.0.1 ...
+[debug] sbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.1 {scala-tool=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.1
+[debug] 	found org.scala-lang.modules#scala-xml_2.11;1.0.1 in sbt-chain
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [scala-tool->runtime]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [scala-tool->compile]
+[debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.1 [scala-tool->master]
 [debug] == resolving dependencies default#typewriter$sources_2.11;1.0->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.1 [scala-tool->default(compile)]
 [info] Resolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.1 {scala-tool=[default(compile)]}
@@ -1791,22 +2356,39 @@
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-slf4j_2.11;2.4.11!akka-slf4j_2.11.jar(src)
 [debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.16!slf4j-api.jar(src)
 [debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.16!slf4j-api.jar
-[debug] 	[NOT REQUIRED] ch.qos.logback#logback-classic;1.1.3!logback-classic.jar
-[debug] 	[NOT REQUIRED] ch.qos.logback#logback-classic;1.1.3!logback-classic.jar(src)
-[debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.1.3!logback-core.jar(src)
-[debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.1.3!logback-core.jar
+[debug] 	[NOT REQUIRED] de.zalando#beard_2.11;0.2.0!beard_2.11.jar(src)
+[debug] 	[NOT REQUIRED] de.zalando#beard_2.11;0.2.0!beard_2.11.jar
+[debug] 	[NOT REQUIRED] org.antlr#antlr4;4.5.2!antlr4.jar
+[debug] 	[NOT REQUIRED] org.antlr#antlr4;4.5.2!antlr4.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.6!scala-xml_2.11.jar
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.6!scala-xml_2.11.jar(src)
+[debug] 	[NOT REQUIRED] io.monix#monix_2.11;2.1.0!monix_2.11.jar(src)
+[debug] 	[NOT REQUIRED] io.monix#monix_2.11;2.1.0!monix_2.11.jar
+[debug] 	[NOT REQUIRED] io.monix#monix-types_2.11;2.1.0!monix-types_2.11.jar
+[debug] 	[NOT REQUIRED] io.monix#monix-types_2.11;2.1.0!monix-types_2.11.jar(src)
+[debug] 	[NOT REQUIRED] io.monix#monix-execution_2.11;2.1.0!monix-execution_2.11.jar(src)
+[debug] 	[NOT REQUIRED] io.monix#monix-execution_2.11;2.1.0!monix-execution_2.11.jar
+[debug] 	[NOT REQUIRED] io.monix#monix-eval_2.11;2.1.0!monix-eval_2.11.jar(src)
+[debug] 	[NOT REQUIRED] io.monix#monix-eval_2.11;2.1.0!monix-eval_2.11.jar
+[debug] 	[NOT REQUIRED] io.monix#monix-reactive_2.11;2.1.0!monix-reactive_2.11.jar
+[debug] 	[NOT REQUIRED] io.monix#monix-reactive_2.11;2.1.0!monix-reactive_2.11.jar(src)
+[debug] 	[NOT REQUIRED] org.jctools#jctools-core;2.0!jctools-core.jar(src)
+[debug] 	[NOT REQUIRED] org.jctools#jctools-core;2.0!jctools-core.jar
+[debug] 	[NOT REQUIRED] ch.qos.logback#logback-classic;1.1.7!logback-classic.jar
+[debug] 	[NOT REQUIRED] ch.qos.logback#logback-classic;1.1.7!logback-classic.jar(src)
+[debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.1.7!logback-core.jar
+[debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.1.7!logback-core.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.4.11!akka-testkit_2.11.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.4.11!akka-testkit_2.11.jar
 [debug] 	[NOT REQUIRED] org.scalatest#scalatest_2.11;2.2.0!scalatest_2.11.jar
 [debug] 	[NOT REQUIRED] org.scalatest#scalatest_2.11;2.2.0!scalatest_2.11.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.0!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.11.0!scala-library.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.0!scala-reflect.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.1!scala-parser-combinators_2.11.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.11!jline.jar(src)
-[debug] :: resolution report :: resolve 1500ms :: artifacts dl 78ms
+[debug] :: resolution report :: resolve 1474ms :: artifacts dl 73ms
 [debug] 	report for default#typewriter$sources_2.11;1.0 compile produced in /Users/mlopezva/Documents/scala-projects/Typewriter/target/resolution-cache/reports/default-typewriter$sources_2.11-compile.xml
 [debug] 	report for default#typewriter$sources_2.11;1.0 runtime produced in /Users/mlopezva/Documents/scala-projects/Typewriter/target/resolution-cache/reports/default-typewriter$sources_2.11-runtime.xml
 [debug] 	report for default#typewriter$sources_2.11;1.0 test produced in /Users/mlopezva/Documents/scala-projects/Typewriter/target/resolution-cache/reports/default-typewriter$sources_2.11-test.xml
@@ -1819,5 +2401,6 @@
 [debug] 	report for default#typewriter$sources_2.11;1.0 sources produced in /Users/mlopezva/Documents/scala-projects/Typewriter/target/resolution-cache/reports/default-typewriter$sources_2.11-sources.xml
 [debug] 	report for default#typewriter$sources_2.11;1.0 docs produced in /Users/mlopezva/Documents/scala-projects/Typewriter/target/resolution-cache/reports/default-typewriter$sources_2.11-docs.xml
 [debug] 	report for default#typewriter$sources_2.11;1.0 pom produced in /Users/mlopezva/Documents/scala-projects/Typewriter/target/resolution-cache/reports/default-typewriter$sources_2.11-pom.xml
+[debug] circular dependency found: org.scala-lang#scala-compiler;2.11.0->org.scala-lang.modules#scala-xml_2.11;1.0.1->...
 [debug] 	report for default#typewriter$sources_2.11;1.0 scala-tool produced in /Users/mlopezva/Documents/scala-projects/Typewriter/target/resolution-cache/reports/default-typewriter$sources_2.11-scala-tool.xml
-[debug] 	resolve done (1500ms resolve - 78ms download)
+[debug] 	resolve done (1474ms resolve - 73ms download)

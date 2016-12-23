@@ -19,5 +19,8 @@ libraryDependencies ++= {
   )
 }
 
-libraryDependencies +=
-  "org.scalatra.scalate" %% "scalate-core" % "1.8.0"
+libraryDependencies += "de.zalando" %% "beard" % "0.2.0"
+
+resolvers ++= Seq(
+  "zalando-maven" at "https://dl.bintray.com/zalando/maven"
+)

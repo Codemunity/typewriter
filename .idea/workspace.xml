@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a093796-151f-49ae-b91e-8dcb97c1896d" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/helpers/FileHelper.scala" afterPath="$PROJECT_DIR$/src/main/scala/files/FileIO.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/typewriter.iml" afterPath="$PROJECT_DIR$/.idea/modules/typewriter.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Typewriter.scala" afterPath="$PROJECT_DIR$/src/main/scala/Typewriter.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/files/assets/JavascriptCompiler.scala" afterPath="$PROJECT_DIR$/src/main/scala/files/assets/JavascriptCompiler.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/files/handlers/FileHandler.scala" afterPath="$PROJECT_DIR$/src/main/scala/files/handlers/FileHandler.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/server/WebServer.scala" afterPath="$PROJECT_DIR$/src/main/scala/server/WebServer.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/files/assets/ImageUtils.scala" afterPath="$PROJECT_DIR$/src/main/scala/files/assets/ImageUtils.scala" />
     </list>
     <ignored path="Typewriter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,8 +56,8 @@
       <file leaf-file-name="Typewriter.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Typewriter.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+            <state relative-caret-position="290">
+              <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -95,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageUtils.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ImageUtils.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/files/assets/ImageUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="152">
+              <caret line="13" column="77" selection-start-line="13" selection-start-column="77" selection-end-line="13" selection-end-column="77" />
               <folding>
                 <element signature="e#22#41#0" expanded="true" />
               </folding>
@@ -139,7 +133,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageWriter.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImageWriter.scala" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.ivy2/cache/com.sksamuel.scrimage/scrimage-core_2.11/srcs/scrimage-core_2.11-2.1.7-sources.jar!/com/sksamuel/scrimage/nio/ImageWriter.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -208,8 +202,8 @@
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala/files/FileIO.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/server/WebServer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/files/assets/ImageUtils.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Typewriter.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/files/assets/ImageUtils.scala" />
       </list>
     </option>
   </component>
@@ -1359,26 +1353,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Typewriter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/files/assets/ImageUtils.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <element signature="e#22#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/com.sksamuel.scrimage/scrimage-core_2.11/srcs/scrimage-core_2.11-2.1.7-sources.jar!/com/sksamuel/scrimage/Image.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1408,6 +1382,26 @@
         <state relative-caret-position="180">
           <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Typewriter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/files/assets/ImageUtils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="13" column="77" selection-start-line="13" selection-start-column="77" selection-end-line="13" selection-end-column="77" />
+          <folding>
+            <element signature="e#22#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -11,7 +11,7 @@ import scala.concurrent.{ExecutionContext, Future}
 
 object ImageUtils {
 
-  def compress(inputImage: String, outputImage: String, compression: Int = 25)(implicit ec: ExecutionContext): Future[Result] = {
+  def compress(inputImage: String, outputImage: String, compression: Int = 50)(implicit ec: ExecutionContext): Future[Result] = {
     Future {
       try {
         implicit val writer = JpegWriter().withCompression(compression)

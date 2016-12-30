@@ -4,8 +4,6 @@ version := "1.0"
 
 scalaVersion := "2.11.0"
 
-libraryDependencies += "net.jcazevedo" %% "moultingyaml" % "0.3.1"
-libraryDependencies += "com.github.nscala-time" %% "nscala-time" % "2.14.0"
 libraryDependencies ++= {
   val akkaVersion = "2.4.11"
   Seq(
@@ -19,7 +17,10 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-http-core"         % akkaVersion,
     "com.typesafe.akka" %% "akka-http-experimental" % akkaVersion,
     "com.typesafe.akka" %% "akka-http-testkit" % akkaVersion,
-    "com.atlassian.commonmark" % "commonmark" % "0.8.0"
+    "com.atlassian.commonmark" % "commonmark" % "0.8.0",
+    "com.google.javascript" % "closure-compiler" % "r1741",
+    "com.github.nscala-time" %% "nscala-time" % "2.14.0",
+    "net.jcazevedo" %% "moultingyaml" % "0.3.1"
   )
 }
 

@@ -1,6 +1,6 @@
 import java.nio.file.{Files, Path, Paths}
 
-import files.assets.SassCompiler
+import files.assets.{JavascriptCompiler, SassCompiler}
 import helpers.FileHelper
 import parsers.PostParser
 import server.WebServer
@@ -32,7 +32,9 @@ object Typewriter extends App {
 //    FileHelper.write(templateContents, filepath)
 //  }
 
-  val f = SassCompiler.compile("/Users/mlopezva/Desktop/codemunity")
+//  val f = SassCompiler.compile("/Users/mlopezva/Desktop/codemunity")
+
+  val f = JavascriptCompiler.compile("/Users/mlopezva/Desktop/codemunity/assets/js", "/Users/mlopezva/Desktop/codemunity/assets/js/compiled.js")
 
   Await.result(f, Duration.Inf)
   println(f)

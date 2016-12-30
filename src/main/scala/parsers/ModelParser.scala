@@ -1,8 +1,7 @@
 package parsers
 
-import laika.api.Transform
-import laika.parse.markdown.Markdown
-import laika.render.HTML
+import org.commonmark.parser.Parser
+import org.commonmark.renderer.html.HtmlRenderer
 
 import scala.concurrent.{ExecutionContext, Future}
 
@@ -28,7 +27,10 @@ trait ModelParser[T] {
   }
 
   def parseMarkdown(markdown: String): String = {
-    Transform from Markdown to HTML fromString markdown toString
+    val parser = Parser.builder().build()
+    val document = parser.parse(markdown)
+    val renderer = HtmlRenderer.builder().build()
+    renderer.render(document)
   }
 
   def configModel(model: T, markdown: String): T

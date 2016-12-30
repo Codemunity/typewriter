@@ -7,7 +7,7 @@ import files.FileCrawler.{Failure, Result, Success}
 
 import scala.concurrent.{Await, ExecutionContext, Future}
 import com.google.javascript.jscomp.{Compiler, CompilerOptions, JSSourceFile}
-import helpers.FileHelper
+import files.FileIO
 
 import scala.concurrent.duration.Duration
 
@@ -18,7 +18,7 @@ object JavascriptCompiler {
     Future {
       val compiler = new Compiler
 
-      val files = FileHelper.files(javascriptDirectory, isJavascriptFile)
+      val files = FileIO.files(javascriptDirectory, isJavascriptFile)
 
       val result = compiler.compile(Array.empty[JSSourceFile], files.map(JSSourceFile.fromFile).toArray, new CompilerOptions)
 
@@ -34,13 +34,13 @@ object JavascriptCompiler {
       } else {
 
         val source = compiler.toSource
-        val writeFuture = FileHelper.write(source, outputPath).map(_ => Success)
+        val writeFuture = FileIO.write(source, outputPath).map(_ => Success)
         Await.result(writeFuture, Duration.Inf)
       }
     }
   }
 
   private def isJavascriptFile(file: File): Boolean = {
-    FileHelper.extension(file.getName).getOrElse("") == "js"
+    FileIO.extension(file.getName).getOrElse("") == "js"
   }
 }

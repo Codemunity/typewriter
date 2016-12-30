@@ -1,13 +1,13 @@
-package helpers
+package files
 
 import java.io.{File, PrintWriter}
-import java.nio.file.{Files, Path, Paths}
+import java.nio.file.{Files, Paths}
 
 import scala.concurrent.{ExecutionContext, Future}
 import scala.io.Source
 
 
-object FileHelper {
+object FileIO {
 
   def read(filepath: String)(implicit executor: ExecutionContext): Future[String] = {
     Future{
@@ -33,8 +33,8 @@ object FileHelper {
         Files.createDirectory(newPath)
       } else {
         for {
-          contents <- FileHelper.read(filepath)
-          result <- FileHelper.write(contents, newFilepath)
+          contents <- FileIO.read(filepath)
+          result <- FileIO.write(contents, newFilepath)
         } yield result
       }
     }

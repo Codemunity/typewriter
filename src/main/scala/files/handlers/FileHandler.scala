@@ -2,8 +2,9 @@ package files.handlers
 
 import java.nio.file.Paths
 
+import files.FileIO
+
 import scala.concurrent.{ExecutionContext, Future}
-import helpers.FileHelper
 import parsers.PostParser
 import templaters.PostTemplater
 
@@ -17,7 +18,7 @@ trait FileHandler[T] {
 object CopyHandler extends FileHandler[Unit] {
 
   override def handleFile(filepath: String, destination: String)(implicit ec: ExecutionContext): Future[Unit] = {
-    FileHelper.copy(filepath, destination)
+    FileIO.copy(filepath, destination)
   }
 
 }
@@ -30,10 +31,10 @@ class TemplateHandler(val templatePath: String) extends FileHandler[Unit] {
     val templater = new PostTemplater(templatePath)
 
     for {
-      contents <- FileHelper.read(filepath)
+      contents <- FileIO.read(filepath)
       (post, _) <- PostParser.parseFileContents(contents)
       template <- templater.createPostTemplate(post)
-      result <- FileHelper.write(template, path)
+      result <- FileIO.write(template, path)
     } yield result
   }
 }

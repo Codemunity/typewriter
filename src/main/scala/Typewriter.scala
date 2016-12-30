@@ -1,7 +1,7 @@
 import java.nio.file.{Files, Path, Paths}
 
-import files.assets.{JavascriptCompiler, SassCompiler}
-import helpers.FileHelper
+import files.FileIO
+import files.assets.{ImageUtils, JavascriptCompiler, SassCompiler}
 import parsers.PostParser
 import server.WebServer
 import templaters.PostTemplater
@@ -34,7 +34,12 @@ object Typewriter extends App {
 
 //  val f = SassCompiler.compile("/Users/mlopezva/Desktop/codemunity")
 
-  val f = JavascriptCompiler.compile("/Users/mlopezva/Desktop/codemunity/assets/js", "/Users/mlopezva/Desktop/codemunity/assets/js/compiled.js")
+//  val f = JavascriptCompiler.compile("/Users/mlopezva/Desktop/codemunity/assets/js", "/Users/mlopezva/Desktop/codemunity/assets/js/compiled.js")
+
+  val f = ImageUtils.compress(
+    "/Users/mlopezva/Desktop/codemunity/images/bg.jpg",
+    "/Users/mlopezva/Desktop/codemunity/images/bg-compressed.jpg"
+  )
 
   Await.result(f, Duration.Inf)
   println(f)

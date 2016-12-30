@@ -24,6 +24,12 @@ libraryDependencies ++= {
   )
 }
 
+libraryDependencies += "com.sksamuel.scrimage" %% "scrimage-core" % "2.1.7"
+
+libraryDependencies += "com.sksamuel.scrimage" %% "scrimage-io-extra" % "2.1.7"
+
+libraryDependencies += "com.sksamuel.scrimage" %% "scrimage-filters" % "2.1.7"
+
 libraryDependencies += "de.zalando" %% "beard" % "0.2.0"
 
 resolvers ++= Seq(

@@ -10,7 +10,7 @@ import java.nio.file.{Files, Paths}
 
 import akka.http.scaladsl.Http.ServerBinding
 import akka.http.scaladsl.model.StatusCodes._
-import helpers.FileHelper
+import files.FileIO
 
 import scala.concurrent.Future
 
@@ -44,7 +44,7 @@ class WebServer(val workingDirectory: String, val host: String = "localhost", va
 
           println(s"retrieving: $fullPath")
 
-          val ext = FileHelper.extension(fullPath).getOrElse("")
+          val ext = FileIO.extension(fullPath).getOrElse("")
 
           val mediaType = MediaTypes.forExtensionOption(ext).getOrElse(MediaTypes.`text/plain`)
           val contentType = ContentType(mediaType, () => HttpCharsets.`UTF-8`)

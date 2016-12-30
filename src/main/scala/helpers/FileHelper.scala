@@ -15,7 +15,7 @@ object FileHelper {
     }
   }
 
-  def write(fileContents: String, filepath: String)(implicit executor: ExecutionContext): Future[Unit] = {
+  def write(fileContents: String, filepath: String)(implicit ec: ExecutionContext): Future[Unit] = {
     Future {
       val writer = new PrintWriter(new File(filepath))
       writer.write(fileContents)
@@ -23,7 +23,7 @@ object FileHelper {
     }
   }
 
-  def copy(filepath: String, destinationDir: String): Future[Unit] = {
+  def copy(filepath: String, destinationDir: String)(implicit ec: ExecutionContext): Future[Unit] = {
     Future {
       val path = Paths.get(filepath)
       val newFilepath = s"$destinationDir/${path.getFileName}"

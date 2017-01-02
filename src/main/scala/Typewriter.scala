@@ -6,7 +6,7 @@ import parsers.PostParser
 import server.WebServer
 import templaters.PostTemplater
 
-import scala.concurrent.Await
+import scala.concurrent.{Await, Future}
 import scala.concurrent.duration.Duration
 import scala.io.StdIn
 
@@ -15,42 +15,57 @@ object Typewriter extends App {
 
   import scala.concurrent.ExecutionContext.Implicits.global
 
-//  val postFile = FileHelper.read("/Users/mlopezva/Desktop/codemunity/tutorials/intellij-setup-for-scala.md")
-//
-//  val postFuture = postFile flatMap { fileContents =>
-//    PostParser.parseFileContents(fileContents)
-//  }
-//
-//  val template = postFuture flatMap { case (post, _) =>
-//    new PostTemplater("/Users/mlopezva/Desktop/codemunity/templates/tutorial").createPostTemplate(post) map { contents =>
-//      (post, contents)
-//    }
-//  }
-//
-//  val f = template flatMap { case (post, templateContents) =>
-//    val filepath = s"/Users/mlopezva/Desktop/codemunity/tutorials/${post.slug}.html"
-//    FileHelper.write(templateContents, filepath)
-//  }
+  val postFile = FileIO.read("/Users/mlopezva/Desktop/codemunity/tutorials/intellij-setup-for-scala.md")
 
-//  val f = SassCompiler.compile("/Users/mlopezva/Desktop/codemunity")
+  val postFuture = postFile flatMap { fileContents =>
+    PostParser.parseFileContents(fileContents)
+  }
 
-//  val f = JavascriptCompiler.compile("/Users/mlopezva/Desktop/codemunity/assets/js", "/Users/mlopezva/Desktop/codemunity/assets/js/compiled.js")
+  val templateFuture = postFuture flatMap { case (post, _) =>
+    new PostTemplater("/Users/mlopezva/Desktop/codemunity/templates/tutorial").createPostTemplate(post) map { contents =>
+      (post, contents)
+    }
+  }
 
-  val f = ImageUtils.compress(
-    "/Users/mlopezva/Desktop/codemunity/images/bg.jpg",
-    "/Users/mlopezva/Desktop/codemunity/images/bg-compressed.jpg"
+  val template = templateFuture flatMap { case (post, templateContents) =>
+    val filepath = s"/Users/mlopezva/Desktop/codemunity/tutorials/${post.slug}.html"
+    FileIO.write(templateContents, filepath)
+  }
+
+  val sass = SassCompiler.compile("/Users/mlopezva/Desktop/codemunity")
+
+  // Order matters
+  val jsFiles = List(
+    "/Users/mlopezva/Desktop/codemunity/assets/js/skel.min.js",
+    "/Users/mlopezva/Desktop/codemunity/assets/js/jquery.min.js",
+    "/Users/mlopezva/Desktop/codemunity/assets/js/jquery.scrollex.min.js",
+    "/Users/mlopezva/Desktop/codemunity/assets/js/util.js",
+    "/Users/mlopezva/Desktop/codemunity/assets/js/main.js"
   )
+
+  val js = JavascriptCompiler.compile(jsFiles, "/Users/mlopezva/Desktop/codemunity/assets/js/compiled.js")
+
+  // Will only output JPEGs
+  val imgs = List (
+    ("/Users/mlopezva/Desktop/codemunity/images/bg_original.jpg", "/Users/mlopezva/Desktop/codemunity/images/bg.jpg"),
+    ("/Users/mlopezva/Desktop/codemunity/images/elm-book-cover_original.png", "/Users/mlopezva/Desktop/codemunity/images/elm-book-cover.png"),
+    ("/Users/mlopezva/Desktop/codemunity/images/akka-book-cover_original.png", "/Users/mlopezva/Desktop/codemunity/images/akka-book-cover.png")
+  )
+
+  val img = Future.sequence(imgs.map((paths) => ImageUtils.compress(paths._1, paths._2)))
+
+  val f = Future.sequence(List(sass, js, img, template))
 
   Await.result(f, Duration.Inf)
   println(f)
 
 
-//  val server = new WebServer("/Users/mlopezva/Desktop/codemunity")
-//  val binding = Await.result(server.start, Duration.Inf)
-//
-//  println(s"Started server at ${server.host}:${server.port}, press enter to kill server")
-//  StdIn.readLine()
-//  server.stop
+  val server = new WebServer("/Users/mlopezva/Desktop/codemunity")
+  val binding = Await.result(server.start, Duration.Inf)
+
+  println(s"Started server at ${server.host}:${server.port}, press enter to kill server")
+  StdIn.readLine()
+  server.stop
 
 //  val exts = List(".png", ".jpg", ".jpeg", ".css", ".html", ".beard", ".js")
 //

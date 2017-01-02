@@ -23,6 +23,14 @@ object FileIO {
     }
   }
 
+  def delete(filepath: String)(implicit ec: ExecutionContext): Future[Unit] = {
+    Future {
+      val fileTemp = new File(filepath)
+      if (fileTemp.exists) fileTemp.delete
+    }
+  }
+
+
   def copy(filepath: String, destinationDir: String)(implicit ec: ExecutionContext): Future[Unit] = {
     Future {
       val path = Paths.get(filepath)

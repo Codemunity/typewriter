@@ -14,11 +14,21 @@ import scala.concurrent.duration.Duration
 
 object JavascriptCompiler {
 
+
   def compile(javascriptDirectory: String, outputPath: String)(implicit ec: ExecutionContext): Future[Result] = {
+    val files = FileIO.files(javascriptDirectory, isJavascriptFile).map(_.getAbsolutePath)
+    JavascriptCompiler.compile(files, outputPath)
+  }
+
+  def compile(files: List[String], outputPath: String)(implicit ec: ExecutionContext): Future[Result] = {
     Future {
+
+      val delete = FileIO.delete(outputPath)
+      Await.result(delete, Duration.Inf)
+
       val compiler = new Compiler
 
-      val files = FileIO.files(javascriptDirectory, isJavascriptFile)
+      println(s"Parsing JS files: $files")
 
       val result = compiler.compile(Array.empty[JSSourceFile], files.map(JSSourceFile.fromFile).toArray, new CompilerOptions)
 
@@ -35,6 +45,7 @@ object JavascriptCompiler {
 
         val source = compiler.toSource
         val writeFuture = FileIO.write(source, outputPath).map(_ => Success)
+
         Await.result(writeFuture, Duration.Inf)
       }
     }

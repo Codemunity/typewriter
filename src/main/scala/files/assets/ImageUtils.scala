@@ -1,9 +1,10 @@
 package files.assets
 
 import java.io.File
+import java.nio.file.{Files, Paths}
 
-import com.sksamuel.scrimage.Image
-import com.sksamuel.scrimage.nio.JpegWriter
+import com.sksamuel.scrimage.{Format, FormatDetector, Image}
+import com.sksamuel.scrimage.nio.{ImageWriter, JpegWriter, PngWriter}
 import files.FileCrawler.{Failure, Result, Success}
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -14,6 +15,7 @@ object ImageUtils {
   def compress(inputImage: String, outputImage: String, compression: Int = 50)(implicit ec: ExecutionContext): Future[Result] = {
     Future {
       try {
+        // FIXME: PNGs lose their transparency
         implicit val writer = JpegWriter().withCompression(compression)
 
         val image = new File(inputImage)

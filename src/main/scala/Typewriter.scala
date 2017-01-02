@@ -2,6 +2,7 @@ import java.nio.file.{Files, Path, Paths}
 
 import files.FileIO
 import files.assets.{ImageUtils, JavascriptCompiler, SassCompiler}
+import models.Post
 import parsers.PostParser
 import server.WebServer
 import templaters.PostTemplater
@@ -15,21 +16,34 @@ object Typewriter extends App {
 
   import scala.concurrent.ExecutionContext.Implicits.global
 
-  val postFile = FileIO.read("/Users/mlopezva/Desktop/codemunity/tutorials/intellij-setup-for-scala.md")
+  val dir = "/Users/mlopezva/Desktop/codemunity"
 
-  val postFuture = postFile flatMap { fileContents =>
-    PostParser.parseFileContents(fileContents)
+  val filesContents: Future[List[String]] = Future.sequence(List(
+    FileIO.read(s"$dir/tutorials/intellij-setup-for-scala.md"),
+    FileIO.read(s"$dir/tutorials/scala-templating-with-beard.md")
+  ))
+
+  val postsFuture: Future[List[(Post, String)]] = filesContents flatMap { posts =>
+    Future.sequence(posts.map(PostParser.parseFileContents))
   }
 
-  val templateFuture = postFuture flatMap { case (post, _) =>
-    new PostTemplater("/Users/mlopezva/Desktop/codemunity/templates/tutorial").createPostTemplate(post) map { contents =>
-      (post, contents)
-    }
+  val postTemplater = new PostTemplater("/Users/mlopezva/Desktop/codemunity/templates/tutorial")
+
+  val templatesFuture = postsFuture flatMap { posts =>
+    Future.sequence(posts.map {
+      case (post, _) =>
+        postTemplater.createPostTemplate(post) map { contents =>
+          (post, contents)
+        }
+    })
   }
 
-  val template = templateFuture flatMap { case (post, templateContents) =>
-    val filepath = s"/Users/mlopezva/Desktop/codemunity/tutorials/${post.slug}.html"
-    FileIO.write(templateContents, filepath)
+  val templates = templatesFuture flatMap { templates =>
+    Future.sequence(templates.map{
+      case (post, templateContents) =>
+        val filepath = s"/Users/mlopezva/Desktop/codemunity/tutorials/${post.slug}.html"
+        FileIO.write(templateContents, filepath)
+    })
   }
 
   val sass = SassCompiler.compile("/Users/mlopezva/Desktop/codemunity")
@@ -45,8 +59,8 @@ object Typewriter extends App {
 
   val js = JavascriptCompiler.compile(jsFiles, "/Users/mlopezva/Desktop/codemunity/assets/js/compiled.js")
 
-  // Will only output JPEGs
-  val imgs = List (
+  // Will only output JPEGs, no transparency
+  val imgs = List(
     ("/Users/mlopezva/Desktop/codemunity/images/bg_original.jpg", "/Users/mlopezva/Desktop/codemunity/images/bg.jpg"),
     ("/Users/mlopezva/Desktop/codemunity/images/elm-book-cover_original.png", "/Users/mlopezva/Desktop/codemunity/images/elm-book-cover.png"),
     ("/Users/mlopezva/Desktop/codemunity/images/akka-book-cover_original.png", "/Users/mlopezva/Desktop/codemunity/images/akka-book-cover.png")
@@ -54,7 +68,7 @@ object Typewriter extends App {
 
   val img = Future.sequence(imgs.map((paths) => ImageUtils.compress(paths._1, paths._2)))
 
-  val f = Future.sequence(List(sass, js, img, template))
+  val f = Future.sequence(List(sass, js, img, templates))
 
   Await.result(f, Duration.Inf)
   println(f)
@@ -67,8 +81,8 @@ object Typewriter extends App {
   StdIn.readLine()
   server.stop
 
-//  val exts = List(".png", ".jpg", ".jpeg", ".css", ".html", ".beard", ".js")
-//
-//  val stream: Stream[Path] = FileHelper.walk("/Users/mlopezva/Desktop/codemunity", exts)
-//  stream.foreach(println)
+  //  val exts = List(".png", ".jpg", ".jpeg", ".css", ".html", ".beard", ".js")
+  //
+  //  val stream: Stream[Path] = FileHelper.walk("/Users/mlopezva/Desktop/codemunity", exts)
+  //  stream.foreach(println)
 }

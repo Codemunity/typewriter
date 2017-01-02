@@ -14,6 +14,7 @@ object PostParser extends ModelParser[Post] {
   }
 
   override def configModel(model: Post, markdown: String): Post = {
+    val sanitizedContent = scala.xml.parsing.XhtmlParser
     model.copy(content = Some(markdown))
   }
 }

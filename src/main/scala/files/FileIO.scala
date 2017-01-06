@@ -54,9 +54,9 @@ object FileIO {
     else Nil
   }
 
-  def extension(fileName: String): Option[String] = {
-    if (Files.isDirectory(Paths.get(fileName))) None
-    else Some(fileName.split("\\.").last)
-  }
+  def extension(fileName: String): String = fileName.split("\\.").last
+
+  def extension(file: File): String = extension(file.getAbsolutePath)
+
 
 }

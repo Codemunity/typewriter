@@ -52,6 +52,6 @@ object JavascriptCompiler {
   }
 
   private def isJavascriptFile(file: File): Boolean = {
-    FileIO.extension(file.getName).getOrElse("") == "js"
+    FileIO.extension(file.getName) == "js"
   }
 }

@@ -44,7 +44,7 @@ class WebServer(val workingDirectory: String, val host: String = "localhost", va
 
           println(s"retrieving: $fullPath")
 
-          val ext = FileIO.extension(fullPath).getOrElse("")
+          val ext = FileIO.extension(fullPath)
 
           val mediaType = MediaTypes.forExtensionOption(ext).getOrElse(MediaTypes.`text/plain`)
           val contentType = ContentType(mediaType, () => HttpCharsets.`UTF-8`)

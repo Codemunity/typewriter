@@ -28,8 +28,6 @@ object JavascriptCompiler {
 
       val compiler = new Compiler
 
-      println(s"Parsing JS files: $files")
-
       val result = compiler.compile(Array.empty[JSSourceFile], files.map(JSSourceFile.fromFile).toArray, new CompilerOptions)
 
       val warnings = result.warnings
@@ -39,11 +37,14 @@ object JavascriptCompiler {
 
       if (errors.nonEmpty) {
         val msg = errors.map(_.toString).reduce(_ + "\n" + _)
-        println(msg)
+        println(s"JavascriptCompiler: ERROR: $msg")
         Failure(msg)
       } else {
 
         val source = compiler.toSource
+
+        val dirsCreated = new File(outputPath).getParentFile.mkdirs()
+        println(s"JavascriptCompiler: parentCreated: $dirsCreated - ${new File(outputPath).getParentFile}")
         val writeFuture = FileIO.write(source, outputPath).map(_ => Success)
 
         Await.result(writeFuture, Duration.Inf)

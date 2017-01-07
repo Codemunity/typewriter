@@ -1,40 +1,60 @@
 package files.handlers
 
+import java.io.File
 import java.nio.file.Paths
 
 import files.FileIO
 
 import scala.concurrent.{ExecutionContext, Future}
 import parsers.PostParser
-import templaters.PostTemplater
+import templaters.{PageTemplater, PostTemplater}
 
 
-trait FileHandler[T] {
+object FileHandler {
 
-  def handleFile(filepath: String, destination: String)(implicit ec: ExecutionContext): Future[T]
+
 
 }
 
-object CopyHandler extends FileHandler[Unit] {
+object CopyHandler {
 
-  override def handleFile(filepath: String, destination: String)(implicit ec: ExecutionContext): Future[Unit] = {
-    FileIO.copy(filepath, destination)
+  def handleFile(filepath: String, destinationDir: String)(implicit ec: ExecutionContext): Future[Unit] = {
+    println()
+    if (filepath.contains("font")) println(s"CopyHandle.handlerFile: F: $filepath - D: $destinationDir")
+    FileIO.copy(filepath, destinationDir)
   }
 
 }
 
-class TemplateHandler(val templatePath: String) extends FileHandler[Unit] {
+class PostTemplateHandler(workingDirectory: String, val templatePath: String) {
 
-  override def handleFile(filepath: String, destination: String)(implicit ec: ExecutionContext): Future[Unit] = {
+  def handleFile(filepath: String, destinationDir: String)(implicit ec: ExecutionContext): Future[Unit] = {
+
     val filename = Paths.get(filepath).getFileName.toString
-    val path = s"$destination/$filename"
-    val templater = new PostTemplater(templatePath)
+    val path = s"$destinationDir/$filename"
+    val pageTemplater = new PageTemplater(workingDirectory, templatePath)
+    val postTemplater = new PostTemplater(pageTemplater)
 
     for {
       contents <- FileIO.read(filepath)
       (post, _) <- PostParser.parseFileContents(contents)
-      template <- templater.createPostTemplate(post)
+      template <- postTemplater.createPostTemplate(post)
       result <- FileIO.write(template, path)
+    } yield result
+  }
+}
+
+
+object PageTemplateHandler {
+
+  def handleFile(workingDirectory: String, filepath: String, destinationDir: String)(implicit ec: ExecutionContext): Future[Unit] = {
+
+    val filename = FileIO.fileNameWithoutExtension(filepath)
+    val destinationFile = s"$destinationDir/$filename.html"
+
+    for {
+      template <- PageTemplater.createPageTemplate(workingDirectory, filepath)
+      result <- FileIO.write(template, destinationFile)
     } yield result
   }
 }

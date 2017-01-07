@@ -1,9 +1,10 @@
 package files
 
 import java.io.{File, PrintWriter}
-import java.nio.file.{Files, Paths}
+import java.nio.file.{Files, Path, Paths}
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.duration.Duration
+import scala.concurrent.{Await, ExecutionContext, Future}
 import scala.io.Source
 
 
@@ -30,21 +31,33 @@ object FileIO {
     }
   }
 
+  def deleteRecursively(filepath: String)(implicit ec: ExecutionContext): Future[Unit] = {
+    val file = new File(filepath)
+    deleteRecursively(file)
+  }
+  private def deleteRecursively(file: File)(implicit ec: ExecutionContext): Future[Unit] = {
+    Future {
+      if (file.isDirectory) {
+        val res = files(file.getAbsolutePath).map(deleteRecursively)
+        Await.result(Future.sequence(res), Duration.Inf)
+      }
+      file.delete
+    }
+  }
+
+  def mkdir(filepath: String)(implicit ec: ExecutionContext): Future[Unit] = {
+    Future {
+      val dir = new File(filepath)
+      if (!dir.exists) dir.mkdir()
+    }
+  }
 
   def copy(filepath: String, destinationDir: String)(implicit ec: ExecutionContext): Future[Unit] = {
     Future {
       val path = Paths.get(filepath)
-      val newFilepath = s"$destinationDir/${path.getFileName}"
+      val newFilepath = Paths.get(s"$destinationDir/${path.getFileName}")
 
-      if (Files.isDirectory(path)) {
-        val newPath = Paths.get(newFilepath)
-        Files.createDirectory(newPath)
-      } else {
-        for {
-          contents <- FileIO.read(filepath)
-          result <- FileIO.write(contents, newFilepath)
-        } yield result
-      }
+      Files.copy(path, newFilepath)
     }
   }
 
@@ -58,5 +71,17 @@ object FileIO {
 
   def extension(file: File): String = extension(file.getAbsolutePath)
 
+  def fileNameWithoutExtension(filepath: String): String = {
+    val ext = extension(filepath)
+    Paths.get(filepath).getFileName.toString.replaceFirst(s".$ext", "")
+  }
+
+  def difference(parent: String, child: String): String = {
+    val parentFile = new File(parent)
+    val childFile = new File(child)
+
+    if (parentFile.getName == childFile.getParentFile.getName) childFile.getName
+    else difference(parent, childFile.getParent) + "/" + childFile.getName
+  }
 
 }

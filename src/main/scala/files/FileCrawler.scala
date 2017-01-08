@@ -31,7 +31,6 @@ class FileCrawler(val workingDirectory: String) {
     println()
     println(s"Crawling $inputDirectory... Outputting to $outputDirectory")
     val files = FileIO.files(inputDirectory, ignorePredicate(inputDirectory))
-//    println(s"FILES: $files")
     val f = files.map {
       case file if file.isDirectory => {
         val newFile = s"$outputDirectory/${file.getName}"
@@ -55,11 +54,6 @@ class FileCrawler(val workingDirectory: String) {
 
   def ignorePredicate(directory: String)(file: File): Boolean = {
     val ignoredFilesFromDir = ignoredFiles.map(f => s"$workingDirectory/$f")
-    //    println()
-    //    println(s"DIR: $directory")
-    //    println(s"IGNORED: $ignoredFilesFromDir")
-    //    println(s"NEW FILE: $directory/${file.getName}")
-    //    println(s"RESULT: ${!ignoredFilesFromDir.contains(s"${file.getAbsolutePath}") && !file.getName.startsWith(".")}")
     !ignoredFilesFromDir.contains(s"$directory/${file.getName}") && !file.getName.startsWith(".")
   }
 

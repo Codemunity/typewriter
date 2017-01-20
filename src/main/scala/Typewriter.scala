@@ -68,12 +68,12 @@ class Typewriter(val workingDirectory: String) {
     } yield result
   }
 
-  def server(port: Int = 9000)(implicit ec: ExecutionContext): Future[ServerBinding] = {
+  def server(port: Int = 5000)(implicit ec: ExecutionContext): Future[ServerBinding] = {
     val server = new WebServer(buildDirPath, port = port)
     server.start
   }
 
-  def run(port: Int = 9000)(implicit ec: ExecutionContext): Future[ServerBinding] = {
+  def run(port: Int = 5000)(implicit ec: ExecutionContext): Future[ServerBinding] = {
     for {
       _ <- make
       serverResult <- server(port)

@@ -30,8 +30,8 @@ class PostTemplateHandler(workingDirectory: String, val templatePath: String) {
 
   def handleFile(filepath: String, destinationDir: String)(implicit ec: ExecutionContext): Future[Unit] = {
 
-    val filename = Paths.get(filepath).getFileName.toString
-    val path = s"$destinationDir/$filename"
+    val filename = FileIO.fileNameWithoutExtension(filepath)
+    val path = s"$destinationDir/$filename.html"
     val pageTemplater = new PageTemplater(workingDirectory, templatePath)
     val postTemplater = new PostTemplater(pageTemplater)
 

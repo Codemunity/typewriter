@@ -16,11 +16,11 @@ class Typewriter(val workingDirectory: String) {
   // TODO: Refactor into config
   val buildDirName = "build"
   val jsFiles = List(
-    "/Users/mlopezva/Desktop/codemunity/assets/js/skel.min.js",
-    "/Users/mlopezva/Desktop/codemunity/assets/js/jquery.min.js",
-    "/Users/mlopezva/Desktop/codemunity/assets/js/jquery.scrollex.min.js",
-    "/Users/mlopezva/Desktop/codemunity/assets/js/util.js",
-    "/Users/mlopezva/Desktop/codemunity/assets/js/main.js"
+    s"$workingDirectory/assets/js/skel.min.js",
+    s"$workingDirectory/assets/js/jquery.min.js",
+    s"$workingDirectory/assets/js/jquery.scrollex.min.js",
+    s"$workingDirectory/assets/js/util.js",
+    s"$workingDirectory/assets/js/main.js"
   )
   val configJsPath = "assets/js/compiled.js"
 
@@ -68,12 +68,12 @@ class Typewriter(val workingDirectory: String) {
     } yield result
   }
 
-  def server(port: Int = 9000)(implicit ec: ExecutionContext): Future[ServerBinding] = {
+  def server(port: Int = 5000)(implicit ec: ExecutionContext): Future[ServerBinding] = {
     val server = new WebServer(buildDirPath, port = port)
     server.start
   }
 
-  def run(port: Int = 9000)(implicit ec: ExecutionContext): Future[ServerBinding] = {
+  def run(port: Int = 5000)(implicit ec: ExecutionContext): Future[ServerBinding] = {
     for {
       _ <- make
       serverResult <- server(port)

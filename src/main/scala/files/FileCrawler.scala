@@ -22,7 +22,9 @@ class FileCrawler(val workingDirectory: String) {
     "assets/sass",
     "assets/js",
     "assets/config",
-    "images/assets"
+    "images/assets",
+    "install_and_generate.sh",
+    "generate.sh"
   )
 
   val postTemplateHandler = new PostTemplateHandler(workingDirectory, postTemplatePath)
@@ -41,10 +43,12 @@ class FileCrawler(val workingDirectory: String) {
       }
       case file if FileIO.extension(file) == "beard" => {
         // Beard adds the extension by default
+        println(s"Parsing Template: ${file.getName}")
         val filename = FileIO.fileNameWithoutExtension(file.getName)
         PageTemplateHandler.handleFile(workingDirectory, s"$inputDirectory/$filename", outputDirectory)
       }
       case file if FileIO.extension(file) == "md" =>
+        println(s"Parsing Tutorial: ${file.getName}")
         postTemplateHandler.handleFile(s"$inputDirectory/${file.getName}", outputDirectory)
       case file =>
         CopyHandler.handleFile(s"$inputDirectory/${file.getName}", outputDirectory)

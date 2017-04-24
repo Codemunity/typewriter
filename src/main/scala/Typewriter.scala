@@ -30,11 +30,11 @@ class Typewriter(val workingDirectory: String) {
 
 
   // TODO: Refactor into config
-  val imgs = List(
-    (s"$workingDirectory/images/bg.jpg", s"$buildDirPath/images/bg.jpg"),
-    (s"$workingDirectory/images/elm-book-cover.png", s"$buildDirPath/images/elm-book-cover.png"),
-    (s"$workingDirectory/images/akka-book-cover.png", s"$buildDirPath/images/akka-book-cover.png")
-  )
+//  val imgs = List(
+//    (s"$workingDirectory/images/bg.jpg", s"$buildDirPath/images/bg.jpg"),
+//    (s"$workingDirectory/images/elm-book-cover.png", s"$buildDirPath/images/elm-book-cover.png"),
+//    (s"$workingDirectory/images/akka-book-cover.png", s"$buildDirPath/images/akka-book-cover.png")
+//  )
 
 
   def clean(implicit ec: ExecutionContext): Future[Unit] = {
@@ -55,10 +55,10 @@ class Typewriter(val workingDirectory: String) {
 
     val sass: Future[Result] = SassCompiler.compile(workingDirectory)
     val js: Future[Result] = JavascriptCompiler.compile(jsFiles, jsPath)
-    val img:  Future[Result] =
-      Future.sequence(imgs.map((paths) => ImageUtils.compress(paths._1, paths._2))).map(_.reduce(FileCrawler.reduce))
+//    val img:  Future[Result] =
+//      Future.sequence(imgs.map((paths) => ImageUtils.compress(paths._1, paths._2))).map(_.reduce(FileCrawler.reduce))
 
-    Future.sequence(List(sass, js, img)).map(_.reduce(FileCrawler.reduce))
+    Future.sequence(List(sass, js)).map(_.reduce(FileCrawler.reduce))
   }
 
   def make(implicit ec: ExecutionContext): Future[Unit] = {

@@ -1,6 +1,7 @@
 package parsers
 
 import models.Config
+import models.ConfigFormat._
 import net.jcazevedo.moultingyaml._
 
 /**

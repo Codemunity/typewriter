@@ -3,30 +3,17 @@ package files
 import java.io.File
 
 import files.handlers.{CopyHandler, PageTemplateHandler, PostTemplateHandler}
+import models.Config
 
 import scala.concurrent.{ExecutionContext, Future}
 
 
-class FileCrawler(val workingDirectory: String) {
+class FileCrawler(val workingDirectory: String, config: Config) {
 
   import FileCrawler._
 
-  // TODO: Refactor into config
-  private val postTemplatePath = s"$workingDirectory/templates/tutorial"
-  private val applicationTemplatePath = s"$workingDirectory/templates/application"
-  private val ignoredFiles = List(
-    "afdesigns",
-    "build",
-    "config",
-    "templates",
-    "assets/sass",
-    "assets/js",
-    "assets/config",
-    "images/assets",
-    "install_and_generate.sh",
-    "generate.sh",
-    "server.sh"
-  )
+  private val postTemplatePath = s"$workingDirectory/${config.postTemplate}"
+  private val ignoredFiles = config.allIgnoredFiles
 
   val postTemplateHandler = new PostTemplateHandler(workingDirectory, postTemplatePath)
 

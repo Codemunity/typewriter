@@ -55,8 +55,15 @@ class Typewriter(val workingDirectory: String) {
 
   def evaluateDependentTemplates(config: Config, posts: List[Post])(implicit ec: ExecutionContext): Future[Unit] = {
 
+    val mappedPosts = posts.map(_.toMap)
 
-    val context: Map[String, Map[String, Object]] = Map("context" ->  Map("posts" -> posts.map(_.toMap)))
+    val context: Map[String, Map[String, Object]] = Map(
+      "context" ->  Map(
+        "allPosts" -> mappedPosts,
+        // TODO: Refactor the 3 into the config file
+        "latestPosts" -> mappedPosts.take(3)
+      )
+    )
 
     val fs = config.postListDependentTemplates
       .map(t => {

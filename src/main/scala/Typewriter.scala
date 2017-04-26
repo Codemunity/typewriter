@@ -1,19 +1,29 @@
 import java.io.File
+import java.util.concurrent.TimeUnit
 
+import akka.actor.ActorSystem
 import akka.http.scaladsl.Http.ServerBinding
 import files.FileCrawler.Result
 import files.assets.{ImageUtils, JavascriptCompiler, SassCompiler}
-import files.handlers.FileHandler
+import files.handlers.PageTemplateHandler
 import files.{FileCrawler, FileIO}
-import models.Config
+import models.{Config, Post}
 import parsers.ConfigParser
 import server.WebServer
+import stores.PostStore
+import stores.PostStore._
+import akka.pattern.ask
+import akka.util.Timeout
 
+import scala.concurrent.duration._
 import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, ExecutionContext, Future}
 
 
 class Typewriter(val workingDirectory: String) {
+
+  val actorSystem = ActorSystem("typewriter")
+  val postStore = actorSystem.actorOf(PostStore.props, "PostStore")
 
   val buildDirPath = s"$workingDirectory/${Config.buildDirName}"
 
@@ -21,10 +31,7 @@ class Typewriter(val workingDirectory: String) {
     val configPath = s"$workingDirectory/${Config.filename}"
     for {
       contents <- FileIO.read(configPath)
-    } yield {
-      println(contents)
-      ConfigParser.yamlToModel(contents)
-    }
+    } yield ConfigParser.yamlToModel(contents)
   }
 
   def clean(implicit ec: ExecutionContext): Future[Unit] = {
@@ -32,13 +39,32 @@ class Typewriter(val workingDirectory: String) {
   }
 
   def build(implicit ec: ExecutionContext): Future[Unit] = {
+    implicit val timeout = Timeout(5, TimeUnit.SECONDS)
+
     for {
       config <- loadConfig
       _ <- FileIO.mkdir(buildDirPath)
-      crawler <- Future.successful(new FileCrawler(workingDirectory, config))
+      crawler <- Future.successful(new FileCrawler(workingDirectory, config, postStore))
       _ <- crawler.crawl(workingDirectory, buildDirPath)
+      // Fix type issues
+      postResult: PostsResult <- (postStore ? AllOrderedByDate).map(_.asInstanceOf[PostsResult])
+      _ <- evaluateDependentTemplates(config, postResult.posts.toList)
       assetsResult <- assets(config)
     } yield assetsResult
+  }
+
+  def evaluateDependentTemplates(config: Config, posts: List[Post])(implicit ec: ExecutionContext): Future[Unit] = {
+
+
+    val context: Map[String, Map[String, Object]] = Map("context" ->  Map("posts" -> posts.map(_.toMap)))
+
+    val fs = config.postListDependentTemplates
+      .map(t => {
+        val filename = FileIO.fileNameWithoutExtension(t)
+        PageTemplateHandler.handleFile(workingDirectory, s"$workingDirectory/$filename", buildDirPath, context)
+      })
+
+    Future.reduce(fs)( (a,b) => a )
   }
 
   def assets(config: Config)(implicit ec: ExecutionContext): Future[Result] = {

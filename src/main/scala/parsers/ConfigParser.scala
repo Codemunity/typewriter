@@ -4,9 +4,7 @@ import models.Config
 import models.ConfigFormat._
 import net.jcazevedo.moultingyaml._
 
-/**
-  * Created by mlopezva on 4/24/17.
-  */
+
 object ConfigParser extends ModelParser[Config] {
 
   override def yamlToModel(yaml: String): Config = {

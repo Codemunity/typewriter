@@ -1,6 +1,6 @@
 package stores
 
-import akka.actor.{Actor, Props}
+import akka.actor.{Actor, ActorLogging, Props}
 import akka.actor.Actor.Receive
 import akka.util.Timeout
 import models.Post
@@ -22,7 +22,7 @@ object PostStore {
   case class PostResult(post: Option[Post])
 }
 
-class PostStore extends Actor {
+class PostStore extends Actor with ActorLogging {
   import PostStore._
 
   var posts = Vector.empty[Post]

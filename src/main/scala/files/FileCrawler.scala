@@ -2,13 +2,16 @@ package files
 
 import java.io.File
 
+import akka.actor.ActorRef
 import files.handlers.{CopyHandler, PageTemplateHandler, PostTemplateHandler}
-import models.Config
+import models.{Config, Post}
+import stores.PostStore
+import stores.PostStore.Add
 
 import scala.concurrent.{ExecutionContext, Future}
 
 
-class FileCrawler(val workingDirectory: String, config: Config) {
+class FileCrawler(val workingDirectory: String, config: Config, postStore: ActorRef) {
 
   import FileCrawler._
 
@@ -37,7 +40,9 @@ class FileCrawler(val workingDirectory: String, config: Config) {
       }
       case file if FileIO.extension(file) == "md" =>
         println(s"Parsing Tutorial: ${file.getName}")
-        postTemplateHandler.handleFile(s"$inputDirectory/${file.getName}", outputDirectory)
+        postTemplateHandler.handleFile(s"$inputDirectory/${file.getName}", outputDirectory).map { p: Post =>
+          postStore ! Add(p)
+        }
       case file =>
         CopyHandler.handleFile(s"$inputDirectory/${file.getName}", outputDirectory)
     }

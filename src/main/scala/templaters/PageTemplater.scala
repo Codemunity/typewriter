@@ -10,6 +10,7 @@ import scala.concurrent.{ExecutionContext, Future}
 
 class PageTemplater(val workingDirectory: String, val templatePath: String) {
 
+  println(s"PageTemplater w:$workingDirectory - t:$templatePath")
   val templateName: String = FileIO.difference(workingDirectory, templatePath)
 
   val loader = new FileTemplateLoader(

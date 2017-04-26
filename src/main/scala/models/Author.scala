@@ -2,9 +2,7 @@ package models
 
 import net.jcazevedo.moultingyaml.DefaultYamlProtocol
 
-/**
-  * Created by mlopezva on 11/15/16.
-  */
+
 case class Author(
                    id: String,
                    name: String,

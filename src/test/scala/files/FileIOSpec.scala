@@ -15,6 +15,10 @@ class FileIOSpec extends WordSpecLike
       val parent = "/my/path/to/parent"
       val child = "/my/path/to/parent/with/a/child"
       FileIO.difference(parent, child) mustBe "with/a/child"
+
+      val useCaseParent = "/Users/mlopezva/Desktop/codemunity"
+      val useCaseChild = "/Users/mlopezva/Desktop/codemunity/index"
+      FileIO.difference(useCaseParent, useCaseChild) mustBe "index"
     }
 
   }

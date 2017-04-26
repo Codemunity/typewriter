@@ -2,30 +2,21 @@ package files
 
 import java.io.File
 
+import akka.actor.ActorRef
 import files.handlers.{CopyHandler, PageTemplateHandler, PostTemplateHandler}
+import models.{Config, Post}
+import stores.PostStore
+import stores.PostStore.Add
 
 import scala.concurrent.{ExecutionContext, Future}
 
 
-class FileCrawler(val workingDirectory: String) {
+class FileCrawler(val workingDirectory: String, config: Config, postStore: ActorRef) {
 
   import FileCrawler._
 
-  // TODO: Refactor into config
-  private val postTemplatePath = s"$workingDirectory/templates/tutorial"
-  private val applicationTemplatePath = s"$workingDirectory/templates/application"
-  private val ignoredFiles = List(
-    "afdesigns",
-    "build",
-    "config",
-    "templates",
-    "assets/sass",
-    "assets/js",
-    "assets/config",
-    "images/assets",
-    "install_and_generate.sh",
-    "generate.sh"
-  )
+  private val postTemplatePath = s"$workingDirectory/${config.postTemplate}"
+  private val ignoredFiles = config.allIgnoredFiles
 
   val postTemplateHandler = new PostTemplateHandler(workingDirectory, postTemplatePath)
 
@@ -42,14 +33,16 @@ class FileCrawler(val workingDirectory: String) {
         } yield result
       }
       case file if FileIO.extension(file) == "beard" => {
-        // Beard adds the extension by default
         println(s"Parsing Template: ${file.getName}")
+        // Beard adds the extension by default
         val filename = FileIO.fileNameWithoutExtension(file.getName)
         PageTemplateHandler.handleFile(workingDirectory, s"$inputDirectory/$filename", outputDirectory)
       }
       case file if FileIO.extension(file) == "md" =>
         println(s"Parsing Tutorial: ${file.getName}")
-        postTemplateHandler.handleFile(s"$inputDirectory/${file.getName}", outputDirectory)
+        postTemplateHandler.handleFile(s"$inputDirectory/${file.getName}", outputDirectory).map { p: Post =>
+          postStore ! Add(p)
+        }
       case file =>
         CopyHandler.handleFile(s"$inputDirectory/${file.getName}", outputDirectory)
     }

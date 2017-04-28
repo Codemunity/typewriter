@@ -41,16 +41,22 @@ class Typewriter(val workingDirectory: String) {
   def build(implicit ec: ExecutionContext): Future[Unit] = {
     implicit val timeout = Timeout(5, TimeUnit.SECONDS)
 
+    def compile(config: Config): Future[Unit] = {
+      val assetsResult = assets(config)
+      val crawlerResult = new FileCrawler(workingDirectory, config, postStore).crawl(workingDirectory, buildDirPath)
+      val templatesResult = crawlerResult.flatMap { _ =>
+        (postStore ? AllOrderedByDate).map {
+          case PostsResult(posts) => evaluateDependentTemplates(config, posts.toList)
+        }
+      }
+
+      templatesResult.map(_ => assetsResult)
+    }
+
     for {
       config <- loadConfig
       _ <- FileIO.mkdir(buildDirPath)
-      crawler <- Future.successful(new FileCrawler(workingDirectory, config, postStore))
-      _ <- crawler.crawl(workingDirectory, buildDirPath)
-      // Fix type issues
-      postResult: PostsResult <- (postStore ? AllOrderedByDate).map(_.asInstanceOf[PostsResult])
-      _ <- evaluateDependentTemplates(config, postResult.posts.toList)
-      assetsResult <- assets(config)
-    } yield assetsResult
+    } yield compile(config)
   }
 
   def evaluateDependentTemplates(config: Config, posts: List[Post])(implicit ec: ExecutionContext): Future[Unit] = {

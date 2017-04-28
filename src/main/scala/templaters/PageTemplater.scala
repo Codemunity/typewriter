@@ -4,6 +4,7 @@ import java.nio.file.Paths
 
 import de.zalando.beard.renderer._
 import files.FileIO
+import org.joda.time.DateTime
 
 import scala.concurrent.{ExecutionContext, Future}
 
@@ -22,13 +23,16 @@ class PageTemplater(val workingDirectory: String, val templatePath: String) {
   val renderer = new BeardTemplateRenderer(templateCompiler)
 
   def createPageTemplate(context: Map[String, Map[String, Object]] = Map())(implicit ec: ExecutionContext): Future[String] = {
+
+    val newContext = context.updated("timestamp", DateTime.now())
+
     Future {
       try {
         val template = templateCompiler.compile(TemplateName(templateName)).get
 
         val result = renderer.render(template,
           StringWriterRenderResult(),
-          context,
+          newContext,
           None)
         result.toString
       } catch {

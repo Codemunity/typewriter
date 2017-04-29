@@ -30,8 +30,14 @@ class PostStore extends Actor with ActorLogging {
   override def receive: Receive = {
     case All => sender() ! PostsResult(posts)
     case AllOrderedByDate => sender() ! PostsResult(posts.sortWith( (p1, p2) => p1.creationDate isAfter p2.creationDate ))
-    case Clear => posts = Vector.empty[Post]
-    case Add(post) => posts = posts.filterNot(_.title == post.title) :+ post
+    case Clear => {
+      println(s"CLEAR: $posts")
+      posts = Vector.empty[Post]
+    }
+    case Add(post) => {
+      println(s"ADDING: ${post.copy(content = Some(""))}")
+      posts = posts.filterNot(_.title == post.title) :+ post
+    }
     case FindByTitle(title) => sender() ! PostResult(posts.find(_.title == title))
   }
 }

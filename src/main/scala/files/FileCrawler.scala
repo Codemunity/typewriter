@@ -40,8 +40,9 @@ class FileCrawler(val workingDirectory: String, config: Config, postStore: Actor
       }
       case file if FileIO.extension(file) == "md" =>
         println(s"Parsing Tutorial: ${file.getName}")
-        postTemplateHandler.handleFile(s"$inputDirectory/${file.getName}", outputDirectory).map { p: Post =>
-          postStore ! Add(p)
+        postTemplateHandler.handleFile(s"$inputDirectory/${file.getName}", outputDirectory).map {
+          case Some(post) => postStore ! Add(post)
+          case _ =>
         }
       case file =>
         CopyHandler.handleFile(s"$inputDirectory/${file.getName}", outputDirectory)

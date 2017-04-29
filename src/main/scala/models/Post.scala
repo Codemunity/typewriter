@@ -14,7 +14,7 @@ case class Post(
                  authorFilename: String,
                  coverImage: String,
                  slug: String,
-                 ignored: Boolean = true
+                 ignored: Boolean
                ) extends Mappable {
 
 //  lazy val author: Author

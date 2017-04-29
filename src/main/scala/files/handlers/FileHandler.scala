@@ -23,7 +23,7 @@ object CopyHandler {
 
 class PostTemplateHandler(workingDirectory: String, val templatePath: String) {
 
-  def handleFile(filepath: String, destinationDir: String)(implicit ec: ExecutionContext): Future[Post] = {
+  def handleFile(filepath: String, destinationDir: String)(implicit ec: ExecutionContext): Future[Option[Post]] = {
 
     val filename = FileIO.fileNameWithoutExtension(filepath)
     val path = s"$destinationDir/$filename.html"
@@ -33,9 +33,9 @@ class PostTemplateHandler(workingDirectory: String, val templatePath: String) {
     for {
       contents <- FileIO.read(filepath)
       (post, _) <- PostParser.parseFileContents(contents)
-      template <- postTemplater.createPostTemplate(post)
-      result <- FileIO.write(template, path)
-    } yield post
+      template <- if (!post.ignored) postTemplater.createPostTemplate(post) else Future.successful("")
+      result <- if (!post.ignored) FileIO.write(template, path) else Future.successful()
+    } yield if (post.ignored) None else Some(post)
   }
 }
 

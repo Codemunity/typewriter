@@ -13,11 +13,11 @@ object SassCompiler {
   def compile(configDirectory: String)(implicit ec: ExecutionContext): Future[Result] = {
     Future {
       val dir = new File(configDirectory)
-      val cleanProcess = Process("compass clean", dir)
-      val compileProcess = Process("compass compile --output-style=compressed", dir)
+//      val cleanProcess = Process("compass clean", dir)
+      val compileProcess = Process("node-sass assets/sass/ -o assets/css/", dir)
 
       try {
-        println(s"clean: ${cleanProcess!!}")
+//        println(s"clean: ${cleanProcess!!}")
         println(s"compile: ${compileProcess!!}")
 
         Success

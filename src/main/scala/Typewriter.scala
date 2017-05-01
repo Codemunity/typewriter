@@ -45,12 +45,18 @@ class Typewriter(val workingDirectory: String) {
       val assetsResult = assets(config)
       val crawlerResult = new FileCrawler(workingDirectory, config, postStore).crawl(workingDirectory, buildDirPath)
       val templatesResult = crawlerResult.flatMap { _ =>
+        println("TEMPLATES RESULT")
         (postStore ? AllOrderedByDate).map {
           case PostsResult(posts) => evaluateDependentTemplates(config, posts.toList)
         }
       }
 
-      templatesResult.map(_ => assetsResult)
+      assetsResult.onComplete(a => println(s"A COMPLETE: $a"))
+      templatesResult.onComplete(a => println(s"T COMPLETE: $a"))
+
+      // TODO: Dig deeper and find out why this does not complete
+      Await.result(assetsResult.flatMap(_ => templatesResult), Duration.Inf)
+      Future.successful()
     }
 
     for {
@@ -82,7 +88,7 @@ class Typewriter(val workingDirectory: String) {
     Future.reduce(fs)( (a,b) => a )
   }
 
-  def assets(config: Config)(implicit ec: ExecutionContext): Future[Result] = {
+  def assets(config: Config)(implicit ec: ExecutionContext): Future[Unit] = {
     assert(new File(buildDirPath).exists())
 
     val sass: Future[Result] = SassCompiler.compile(workingDirectory)
@@ -93,26 +99,16 @@ class Typewriter(val workingDirectory: String) {
 //    val img:  Future[Result] =
 //      Future.sequence(imgs.map((paths) => ImageUtils.compress(paths._1, paths._2))).map(_.reduce(FileCrawler.reduce))
 
-    Future.sequence(List(sass, js)).map(_.reduce(FileCrawler.reduce))
+    Future.sequence(List(sass, js)).map(_ => println("Assets Complete"))
   }
 
-  def make(implicit ec: ExecutionContext): Future[Unit] = {
-    for {
-      _ <- clean
-      result <- build
-    } yield result
-  }
+  def make(implicit ec: ExecutionContext): Future[Unit] = clean.flatMap(_ => build)
 
   def server(port: Int = 5000)(implicit ec: ExecutionContext): Future[ServerBinding] = {
     val server = new WebServer(buildDirPath, port = port)
     server.start
   }
 
-  def run(port: Int = 5000)(implicit ec: ExecutionContext): Future[ServerBinding] = {
-    for {
-      _ <- make
-      serverResult <- server(port)
-    } yield serverResult
-  }
+  def run(port: Int = 5000)(implicit ec: ExecutionContext): Future[ServerBinding] = make.flatMap(_ => server(port))
 
 }

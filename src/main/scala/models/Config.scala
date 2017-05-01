@@ -15,7 +15,7 @@ case class Config(
                    // JavaScript output path under working directory, e.g. "assets/js/compiled.js"
                    jsOutputFile: String
                  ) {
-  def allIgnoredFiles = ignoredFiles ++ jsFiles ++ postListDependentTemplates
+  def allIgnoredFiles = ignoredFiles ++ jsFiles ++ postListDependentTemplates ++ Config.filename
 }
 
 object Config {

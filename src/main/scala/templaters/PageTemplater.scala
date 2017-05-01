@@ -24,7 +24,7 @@ class PageTemplater(val workingDirectory: String, val templatePath: String) {
 
   def createPageTemplate(context: Map[String, Map[String, Object]] = Map())(implicit ec: ExecutionContext): Future[String] = {
 
-    val newContext = context.updated("timestamp", DateTime.now())
+    val newContext = context.updated("timestamp", DateTime.now().getMillis)
 
     Future {
       try {

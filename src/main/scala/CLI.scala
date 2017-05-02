@@ -16,12 +16,16 @@ object CLI extends App {
 
   val f = cmd match {
     case "watch" => typewriter.run()
-    case "build" => typewriter.make.map(_ => System.exit(0))
+    case "build" => typewriter.make
     case "help" => Future.successful("Help.")
     case _ => Future.successful("Unsupported command, please run the 'help' command.")
   }
 
+  f.onComplete(res => println(s"F COMPLETE: $res"))
+
   val res = Await.result(f, Duration.Inf)
   println(res)
+
+  if (cmd == "build") System.exit(0)
 
 }

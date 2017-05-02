@@ -3,7 +3,7 @@ import java.util.concurrent.TimeUnit
 
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http.ServerBinding
-import files.FileCrawler.Result
+import files.FileCrawler.{Result, Success}
 import files.assets.{ImageUtils, JavascriptCompiler, SassCompiler}
 import files.handlers.PageTemplateHandler
 import files.{FileCrawler, FileIO}
@@ -41,28 +41,34 @@ class Typewriter(val workingDirectory: String) {
   def build(implicit ec: ExecutionContext): Future[Unit] = {
     implicit val timeout = Timeout(5, TimeUnit.SECONDS)
 
-    def compile(config: Config): Future[Unit] = {
-      val assetsResult = assets(config)
-      val crawlerResult = new FileCrawler(workingDirectory, config, postStore).crawl(workingDirectory, buildDirPath)
-      val templatesResult = crawlerResult.flatMap { _ =>
-        println("TEMPLATES RESULT")
-        (postStore ? AllOrderedByDate).map {
-          case PostsResult(posts) => evaluateDependentTemplates(config, posts.toList)
-        }
-      }
-
-      assetsResult.onComplete(a => println(s"A COMPLETE: $a"))
-      templatesResult.onComplete(a => println(s"T COMPLETE: $a"))
-
-      // TODO: Dig deeper and find out why this does not complete
-      Await.result(assetsResult.flatMap(_ => templatesResult), Duration.Inf)
-      Future.successful()
-    }
+//    def compile(config: Config): Future[Unit] = {
+//      val assetsResult = assets(config)
+//      val crawlerResult = new FileCrawler(workingDirectory, config, postStore).crawl(workingDirectory, buildDirPath)
+//      val templatesResult = crawlerResult.flatMap { _ =>
+//        println("TEMPLATES RESULT")
+//        (postStore ? AllOrderedByDate).map {
+//          case PostsResult(posts) => evaluateDependentTemplates(config, posts.toList)
+//        }
+//      }
+//
+//      assetsResult.onComplete(a => println(s"A COMPLETE: $a"))
+//      templatesResult.onComplete(a => println(s"T COMPLETE: $a"))
+//
+////      assetsResult.map(_ => templatesResult)
+//
+//      // TODO: Dig deeper and find out why this does not complete
+//      Await.result(assetsResult.flatMap(_ => templatesResult), Duration.Inf)
+//      Future.successful(Success)
+//    }
 
     for {
       config <- loadConfig
       _ <- FileIO.mkdir(buildDirPath)
-    } yield compile(config)
+      _ <- new FileCrawler(workingDirectory, config, postStore).crawl(workingDirectory, buildDirPath)
+      _ <- assets(config)
+      PostsResult(posts) <- postStore ? AllOrderedByDate
+      res <- evaluateDependentTemplates(config, posts.toList)
+    } yield res
   }
 
   def evaluateDependentTemplates(config: Config, posts: List[Post])(implicit ec: ExecutionContext): Future[Unit] = {

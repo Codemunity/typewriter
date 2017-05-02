@@ -75,7 +75,7 @@ class Typewriter(val workingDirectory: String) {
 
     val mappedPosts = posts.map(_.toMap)
 
-    print(s"POSTS: ${posts.map(_.copy(content = Some("")))}")
+    print(s"POSTS: ${posts.map(_.copy(content = Some(""))).map(_.toMap)}")
 
     val context: Map[String, Map[String, Object]] = Map(
       "context" ->  Map(

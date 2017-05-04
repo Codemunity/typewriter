@@ -14,7 +14,7 @@ object SassCompiler {
     Future {
       val dir = new File(configDirectory)
 //      val cleanProcess = Process("compass clean", dir)
-      val compileProcess = Process("node-sass assets/sass/ -o assets/css/", dir)
+      val compileProcess = Process("node-sass --output-style compressed assets/sass/ -o assets/css/", dir)
 
       try {
 //        println(s"clean: ${cleanProcess!!}")

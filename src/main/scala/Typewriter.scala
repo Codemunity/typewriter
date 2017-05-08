@@ -15,11 +15,9 @@ import stores.PostStore._
 import akka.pattern.ask
 import akka.util.Timeout
 import models.builds.{BuildType, DevelopmentBuild}
-import sun.awt.ConstrainableGraphics
+import templaters.TagTemplater
 
-import scala.concurrent.duration._
-import scala.concurrent.duration.Duration
-import scala.concurrent.{Await, ExecutionContext, Future}
+import scala.concurrent.{ExecutionContext, Future}
 
 
 class Typewriter(val workingDirectory: String) {
@@ -28,6 +26,8 @@ class Typewriter(val workingDirectory: String) {
   val postStore = actorSystem.actorOf(PostStore.props, "PostStore")
 
   val buildDirPath = s"$workingDirectory/${Config.buildDirName}"
+
+  val tagTemplater = new TagTemplater(workingDirectory)
 
   def loadConfig(implicit ec: ExecutionContext): Future[Config] = {
     val configPath = s"$workingDirectory/${Config.filename}"
@@ -70,6 +70,7 @@ class Typewriter(val workingDirectory: String) {
       _ <- assets(config, buildType)
       PostsResult(posts) <- postStore ? AllOrderedByDate
       _ <- createPostsJsonFile(config, posts.toList)
+      _ <- tagTemplater.createTemplates(config, posts.toList)
       res <- evaluateDependentTemplates(config, posts.toList)
     } yield res
   }

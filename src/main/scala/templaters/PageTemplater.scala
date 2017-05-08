@@ -38,7 +38,7 @@ class PageTemplater(val workingDirectory: String, val templatePath: String) {
       } catch {
         case e: Exception => {
           println(s"ERROR with $templateName at $templatePath")
-          throw  e
+          throw e
         }
       }
     }

@@ -76,9 +76,15 @@ object FileIO {
     Paths.get(filepath).getFileName.toString.replaceFirst(s".$ext", "")
   }
 
+  def parentPath(path: String): String = {
+    new File(path).getParent
+  }
+
   def difference(parent: String, child: String): String = {
     val parentFile = new File(parent)
     val childFile = new File(child)
+
+    println(s"DIFF: $parent - $child")
 
     if (parentFile.getName == childFile.getParentFile.getName) childFile.getName
     else difference(parent, childFile.getParent) + "/" + childFile.getName

@@ -1,8 +1,5 @@
 package templaters
 
-import java.nio.file.Paths
-
-import de.zalando.beard.renderer._
 import models.Post
 
 import scala.concurrent.{ExecutionContext, Future}

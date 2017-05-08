@@ -17,16 +17,19 @@ case class Config(
                    jsOutputFile: String,
 
                    imagesToOptimize: List[String],
-                   postsFile: String
+                   postsFile: String,
+                   tagsTemplate: String
                  )
+
 object Config {
   val filename = "typewriter.json"
   val buildDirName = "build"
 
   def allIgnoredFiles(config: Config) =
     config.ignoredFiles ++
-      config.jsFiles ++ config.
-      postListDependentTemplates ++
+      config.jsFiles ++
+      config.postListDependentTemplates ++
+      config.tagsTemplate ++
       Config.filename
 }
 
@@ -35,5 +38,5 @@ object Config {
 //}
 
 object ConfigJson extends SprayJsonSupport with DefaultJsonProtocol {
-  implicit val configFormat = jsonFormat7(Config.apply)
+  implicit val configFormat = jsonFormat8(Config.apply)
 }

@@ -53,4 +53,3 @@ object PostJson extends SprayJsonSupport with DefaultJsonProtocol {
     }
   }
 }
-

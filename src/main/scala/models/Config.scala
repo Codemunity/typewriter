@@ -28,8 +28,8 @@ object Config {
   def allIgnoredFiles(config: Config) =
     config.ignoredFiles ++
       config.jsFiles ++
-      config.postListDependentTemplates ++
-      config.tagsTemplate ++
+      config.postListDependentTemplates :+
+      config.tagsTemplate :+
       Config.filename
 }
 

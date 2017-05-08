@@ -18,14 +18,14 @@ class FileCrawler(val workingDirectory: String, config: Config, postStore: Actor
   private val postTemplatePath = s"$workingDirectory/${config.postTemplate}"
   private val ignoredFiles = Config.allIgnoredFiles(config)
 
+  println(s"IGNORED: $ignoredFiles")
+
   val postTemplateHandler = new PostTemplateHandler(workingDirectory, postTemplatePath)
 
   def crawl(inputDirectory: String, outputDirectory: String)(implicit ec: ExecutionContext): Future[Result] = {
     println()
     println(s"Crawling $inputDirectory... Outputting to $outputDirectory")
     val files = FileIO.files(inputDirectory, ignorePredicate(inputDirectory))
-    println("FILES")
-    files.map(_.getAbsolutePath).foreach(println)
     val f = files.map {
       case file if file.isDirectory => {
         val newFile = s"$outputDirectory/${file.getName}"
@@ -54,10 +54,10 @@ class FileCrawler(val workingDirectory: String, config: Config, postStore: Actor
 
   def ignorePredicate(directory: String)(file: File): Boolean = {
     val ignoredFilesFromDir = ignoredFiles.map(f => s"$workingDirectory/$f")
-    if (file.getName.contains("tag")) println(s"PREDICATE: $directory/${file.getName} - ${ignoredFilesFromDir.toString}")
-    !ignoredFilesFromDir.contains(s"$directory/${file.getName}") && !file.getName.startsWith(".")
-  }
+    val fullpath = s"$directory/${file.getName}"
 
+    !ignoredFilesFromDir.contains(fullpath) && !file.getName.startsWith(".")
+  }
 }
 
 object FileCrawler {

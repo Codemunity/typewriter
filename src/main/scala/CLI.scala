@@ -1,3 +1,5 @@
+import models.builds.ProductionBuild
+
 import scala.concurrent.duration._
 import scala.concurrent.{Await, Future}
 
@@ -6,7 +8,7 @@ object CLI extends App {
 
   import scala.concurrent.ExecutionContext.Implicits.global
 
-  val cmd = args.headOption.getOrElse("build")
+  val cmd = args.headOption.getOrElse("watch")
 
   val dir =
     if (args.isEmpty) "/Users/mlopezva/Desktop/codemunity"
@@ -16,7 +18,7 @@ object CLI extends App {
 
   val f = cmd match {
     case "watch" => typewriter.run()
-    case "build" => typewriter.make
+    case "build" => typewriter.make(ProductionBuild)
     case "help" => Future.successful("Help.")
     case _ => Future.successful("Unsupported command, please run the 'help' command.")
   }

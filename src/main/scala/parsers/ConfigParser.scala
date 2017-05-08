@@ -1,15 +1,13 @@
 package parsers
 
 import models.Config
-import models.ConfigFormat._
-import net.jcazevedo.moultingyaml._
+import models.ConfigJson._
+import spray.json._
 
 
-object ConfigParser extends ModelParser[Config] {
+object ConfigParser {
 
-  override def yamlToModel(yaml: String): Config = {
-    yaml.stripMargin.parseYaml.convertTo[Config]
+  def jsonToModel(json: String): Config = {
+    configFormat.read(json.parseJson)
   }
-
-  override def configModel(model: Config, markdown: String): Config = model
 }

@@ -16,7 +16,7 @@ class FileCrawler(val workingDirectory: String, config: Config, postStore: Actor
   import FileCrawler._
 
   private val postTemplatePath = s"$workingDirectory/${config.postTemplate}"
-  private val ignoredFiles = config.allIgnoredFiles
+  private val ignoredFiles = Config.allIgnoredFiles(config)
 
   val postTemplateHandler = new PostTemplateHandler(workingDirectory, postTemplatePath)
 

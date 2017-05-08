@@ -1,6 +1,7 @@
 package models
 
-import net.jcazevedo.moultingyaml.DefaultYamlProtocol
+import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
+import spray.json.DefaultJsonProtocol
 
 
 case class Config(
@@ -13,16 +14,26 @@ case class Config(
                    // List of JavaScript files to be minified and bundled
                    jsFiles: List[String],
                    // JavaScript output path under working directory, e.g. "assets/js/compiled.js"
-                   jsOutputFile: String
-                 ) {
-  def allIgnoredFiles = ignoredFiles ++ jsFiles ++ postListDependentTemplates ++ Config.filename
-}
+                   jsOutputFile: String,
 
+                   imagesToOptimize: List[String],
+                   postsFile: String
+                 )
 object Config {
-  val filename = "typewriter.yaml"
+  val filename = "typewriter.json"
   val buildDirName = "build"
+
+  def allIgnoredFiles(config: Config) =
+    config.ignoredFiles ++
+      config.jsFiles ++ config.
+      postListDependentTemplates ++
+      Config.filename
 }
 
-object ConfigFormat extends DefaultYamlProtocol {
-  implicit val configFormat = yamlFormat5(Config.apply)
+//object ConfigFormat extends DefaultYamlProtocol {
+//  implicit val configFormat = yamlFormat5(Config.apply)
+//}
+
+object ConfigJson extends SprayJsonSupport with DefaultJsonProtocol {
+  implicit val configFormat = jsonFormat7(Config.apply)
 }

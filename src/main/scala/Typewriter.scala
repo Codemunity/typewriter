@@ -14,6 +14,8 @@ import stores.PostStore
 import stores.PostStore._
 import akka.pattern.ask
 import akka.util.Timeout
+import models.builds.{BuildType, DevelopmentBuild}
+import sun.awt.ConstrainableGraphics
 
 import scala.concurrent.duration._
 import scala.concurrent.duration.Duration
@@ -31,14 +33,14 @@ class Typewriter(val workingDirectory: String) {
     val configPath = s"$workingDirectory/${Config.filename}"
     for {
       contents <- FileIO.read(configPath)
-    } yield ConfigParser.yamlToModel(contents)
+    } yield ConfigParser.jsonToModel(contents)
   }
 
   def clean(implicit ec: ExecutionContext): Future[Unit] = {
     FileIO.deleteRecursively(buildDirPath)
   }
 
-  def build(implicit ec: ExecutionContext): Future[Unit] = {
+  def build(buildType: BuildType)(implicit ec: ExecutionContext): Future[Unit] = {
     implicit val timeout = Timeout(5, TimeUnit.SECONDS)
 
 //    def compile(config: Config): Future[Unit] = {
@@ -65,10 +67,19 @@ class Typewriter(val workingDirectory: String) {
       config <- loadConfig
       _ <- FileIO.mkdir(buildDirPath)
       _ <- new FileCrawler(workingDirectory, config, postStore).crawl(workingDirectory, buildDirPath)
-      _ <- assets(config)
+      _ <- assets(config, buildType)
       PostsResult(posts) <- postStore ? AllOrderedByDate
+      _ <- createPostsJsonFile(config, posts.toList)
       res <- evaluateDependentTemplates(config, posts.toList)
     } yield res
+  }
+
+  def createPostsJsonFile(config: Config, posts: List[Post])(implicit ec: ExecutionContext): Future[Unit] = {
+    import spray.json._
+    import models.PostJson._
+
+    val json = posts.toJson.compactPrint
+    FileIO.write(json, s"$buildDirPath/${config.postsFile}")
   }
 
   def evaluateDependentTemplates(config: Config, posts: List[Post])(implicit ec: ExecutionContext): Future[Unit] = {
@@ -94,27 +105,27 @@ class Typewriter(val workingDirectory: String) {
     Future.reduce(fs)( (a,b) => a )
   }
 
-  def assets(config: Config)(implicit ec: ExecutionContext): Future[Unit] = {
+  def assets(config: Config, buildType: BuildType)(implicit ec: ExecutionContext): Future[Unit] = {
     assert(new File(buildDirPath).exists())
 
-    val sass: Future[Result] = SassCompiler.compile(workingDirectory)
+    val sass: Future[Result] = SassCompiler.compile(workingDirectory, buildType)
 
     val jsFiles = config.jsFiles.map(file => s"$workingDirectory/$file")
     val jsPath = s"$buildDirPath/${config.jsOutputFile}"
     val js: Future[Result] = JavascriptCompiler.compile(jsFiles, jsPath)
-//    val img:  Future[Result] =
-//      Future.sequence(imgs.map((paths) => ImageUtils.compress(paths._1, paths._2))).map(_.reduce(FileCrawler.reduce))
+
+//    val img = Future.sequence(config.imagesToOptimize.map(i => ImageUtils.compress(s"$workingDirectory/$i", s"$buildDirPath/$i")))
 
     Future.sequence(List(sass, js)).map(_ => println("Assets Complete"))
   }
 
-  def make(implicit ec: ExecutionContext): Future[Unit] = clean.flatMap(_ => build)
+  def make(buildType: BuildType)(implicit ec: ExecutionContext): Future[Unit] = clean.flatMap(_ => build(buildType))
 
   def server(port: Int = 5000)(implicit ec: ExecutionContext): Future[ServerBinding] = {
     val server = new WebServer(buildDirPath, port = port)
     server.start
   }
 
-  def run(port: Int = 5000)(implicit ec: ExecutionContext): Future[ServerBinding] = make.flatMap(_ => server(port))
+  def run(port: Int = 5000)(implicit ec: ExecutionContext): Future[ServerBinding] = make(DevelopmentBuild).flatMap(_ => server(port))
 
 }

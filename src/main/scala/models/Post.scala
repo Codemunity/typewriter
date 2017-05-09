@@ -26,7 +26,7 @@ case class Post(
     val (title, creationDate, description, content, tags, authorFilename, coverImage, slug, _) = Post.unapply(this).get
     Map(
       "title" -> title,
-      "creationDate" -> creationDate.plusDays(1).toString("d MMMM, yyyy"),
+      "creationDate" -> creationDate.toString("d MMMM, yyyy"),
       "description" -> description,
       "content" -> content,
       "tags" -> tags,

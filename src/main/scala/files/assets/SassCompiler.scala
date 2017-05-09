@@ -17,11 +17,15 @@ object SassCompiler {
       val dir = new File(configDirectory)
 //      val cleanProcess = Process("compass clean", dir)
 
-      println("Compiling SASS with ")
+
 
       val process = buildType match {
-        case DevelopmentBuild => Process(s"node-sass --r assets/sass/ -o ${Config.buildDirName}/assets/css/", dir)
-        case ProductionBuild => Process(s"node-sass --output-style compressed assets/sass/ -o ${Config.buildDirName}/assets/css/", dir)
+        case DevelopmentBuild =>
+          println("Compiling SASS with DevelopmentBuild")
+          Process(s"node-sass --r assets/sass/ -o ${Config.buildDirName}/assets/css/", dir)
+        case ProductionBuild =>
+          println("Compiling SASS with ProductionBuild")
+          Process(s"node-sass --output-style compressed assets/sass/ -o ${Config.buildDirName}/assets/css/", dir)
       }
 
       // node-sass -r assets/sass/ -o build/assets/css/
